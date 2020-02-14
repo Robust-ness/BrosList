@@ -17,6 +17,10 @@ html {
 	box-sizing:border-box;
 }
 
+.search{
+    position: fixed;
+    width: 100%;
+}
 .search-title{
     font-size: 3rem;
     text-align: center;
@@ -51,9 +55,36 @@ html {
     color: white;
     display: flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .header-main{
-    justify-content: center;
+    text-align: center;
+    width: 100%;
+    font-size: 10rem;
+    margin-top: 20rem;
 }
 
+.header-sub{
+    text-align: center;
+    width: 100%;
+    font-size: 10rem;
+    margin-top: 10rem;
+}
+
+.item-panel{
+    height: 40rem;
+    width: 100%;
+}
+
+.item-panel{
+    display: flex;
+    justify-content: space-around;
+}
+
+.card{
+    background-color: aqua;
+    width: 30%;
+}
