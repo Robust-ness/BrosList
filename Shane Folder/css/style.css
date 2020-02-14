@@ -1,0 +1,59 @@
+:root{
+	--color-primary:#e05418;
+
+	--default-font-size:2rem;
+	--default-font-family: 'Acme', sans-serif;
+}
+
+html {
+	font-size: 62.5%;
+	background-color: var(--color-white);
+    background-color: #DFE3E3;
+}
+
+*,*::after,*::before{
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+}
+
+.search-title{
+    font-size: 3rem;
+    text-align: center;
+    color: red;
+    background-color: aqua;
+}
+
+.user-search{
+    background: green;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.display{
+    height: 80vh;
+    background-image: linear-gradient(
+        to bottom right, 
+        rgba(224, 84, 24, .1),
+		rgba(255,255,255,.1)),
+    url(img/main.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+#bro-name{
+    width: 80%;
+}
+
+.headers{
+    color: white;
+    display: flex;
+    position: relative;
+}
+
+.header-main{
+    justify-content: center;
+}
+
