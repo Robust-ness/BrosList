@@ -1,0 +1,10 @@
+html{
+    font-size: 62.5%;
+}
+
+.top-header{
+    color: darkblue;
+    display: flex;
+    justify-content: center;
+    font-size: 5rem;
+}
