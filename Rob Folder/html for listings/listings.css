@@ -8,3 +8,22 @@ html{
     justify-content: center;
     font-size: 5rem;
 }
+
+.item-row{
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: .1rem solid #ddd;
+    border-radius: .4rem;
+}
+
+.item-image{
+    padding: 1rem;
+    width: 15rem;
+}
