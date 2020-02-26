@@ -16,14 +16,22 @@ html{
 }
 
 .item{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    text-align: center;
     border: .1rem solid #ddd;
     border-radius: .4rem;
+    width: 20%;
 }
 
 .item-image{
     padding: 1rem;
     width: 15rem;
 }
+.item-name{
+    font-size: 2rem;
+}
+.item-description{
+    font-size: 1.5rem;
+}
+
+PLAN: change everything to percents so displays stays the same throughout changing size of viewport
