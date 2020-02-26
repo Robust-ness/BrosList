@@ -18,20 +18,30 @@ html{
 .item{
     flex-direction: column;
     text-align: center;
-    border: .1rem solid #ddd;
-    border-radius: .4rem;
+    border: 0.1rem solid #ddd;
+    border-radius: 1%;
     width: 20%;
+    padding: .5%;
 }
 
 .item-image{
-    padding: 1rem;
-    width: 15rem;
+    padding: 3%;
+    width: 50%;
 }
 .item-name{
     font-size: 2rem;
 }
 .item-description{
     font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .item-name{
+        font-size: 1rem;
+    }
+    .item-description{
+        font-size: .1rem;
+    }
 }
 
 PLAN: change everything to percents so displays stays the same throughout changing size of viewport
