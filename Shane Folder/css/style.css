@@ -3,12 +3,12 @@
     --color-secondary: rgb(194, 194, 194);
 
 	--default-font-size:2rem;
-	--default-font-family: 'Lato', ;
+	--default-font-family: 'Spartan', ;
 }
 
 html {
     font-size: 62.5%;
-    font: var(--default-font-family);
+    font-style: var(--default-font-family);
 	background-color: var(--color-white);
     background-color: #DFE3E3;
 }
@@ -65,14 +65,14 @@ html {
 .header-main{
     text-align: center;
     width: 100%;
-    font-size: 6rem;
+    font-size: 10rem;
     margin-top: 7rem;
 }
 
 .header-sub{
     text-align: center;
     width: 100%;
-    font-size: 4rem;
+    font-size: 8rem;
     margin-top: 5rem;
 }
 
