@@ -1,9 +1,14 @@
 html{
     font-size: 62.5%;
 }
+.body-one{
+    background-color: darkblue;
+    padding-top: 5vh;
+    padding-bottom: 12vh;
+}
 
 .top-header{
-    color: darkblue;
+    color: white;
     display: flex;
     justify-content: center;
     font-size: 5rem;
@@ -18,15 +23,17 @@ html{
 .item{
     flex-direction: column;
     text-align: center;
-    border: 0.1rem solid #ddd;
-    border-radius: 1%;
+    border: 0.3rem solid black;
+    border-radius: 2%;
     width: 20%;
     padding: .5%;
+    background-color: white;
 }
 
 .item-image{
     padding: 3%;
     width: 50%;
+    border-radius: 10%;
 }
 .item-name{
     font-size: 2rem;
@@ -47,5 +54,3 @@ html{
         font-size: 0.1rem;
     }
 }
-
-PLAN: change everything to percents so displays stays the same throughout changing size of viewport
