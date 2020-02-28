@@ -12,6 +12,7 @@ html{
     display: flex;
     justify-content: center;
     font-size: 5rem;
+    font-family: 'Lato';
 }
 
 .item-row{
@@ -37,9 +38,11 @@ html{
 }
 .item-name{
     font-size: 2rem;
+    font-family: 'Lato';
 }
 .item-description{
     font-size: 1.5rem;
+    font-family: 'Lato';
 }
 
 @media only screen and (max-width: 600px) {
