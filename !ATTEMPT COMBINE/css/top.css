@@ -92,6 +92,7 @@ html {
     background-color: var(--color-secondary);
     display: flex;
     justify-content: space-around;
+    height: 60vh;
 }
 
 .card{

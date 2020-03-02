@@ -2,9 +2,16 @@ html{
     font-size: 62.5%;
 }
 .body-two{
+    background-image: linear-gradient(
+        to bottom right, 
+        rgba(224, 84, 24, .1),
+		rgba(255,255,255,.1)),
+    url(../img/main.jpg);
+    background-size: cover;
+    background-position: bottom;
     background-color: darkblue;
-    padding-top: 5vh;
-    padding-bottom: 12vh;
+    padding-top: 10vh;
+    padding-bottom: 20vh;
 }
 
 .top-header{
