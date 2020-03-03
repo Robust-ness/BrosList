@@ -48,8 +48,9 @@ html {
     background-position: bottom;
 }
 
-#bro-name{
-    width: 80%;
+.item-search{
+    width: 40rem;
+    height: 10rem;
 }
 
 .headers{
