@@ -28,3 +28,7 @@
 h1{
     margin: 3rem;
 }
+
+input{
+  object-position: center;
+}
