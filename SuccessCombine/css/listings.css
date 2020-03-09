@@ -27,7 +27,10 @@ html{
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
+    background-color: white;
 }
+
+WHAT IF IT WAS ONE ROW??? WORK ON THIS!!
 
 .item{
     flex-direction: column;
