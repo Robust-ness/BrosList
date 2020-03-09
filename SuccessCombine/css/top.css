@@ -153,34 +153,6 @@ html {
 	font-family: 'Fjalla One', sans-serif;
 }
 
-/* Fixed sidenav, full height */
-.sidenav {
-  height: 100%;
-  width: 200px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 20px;
-}
-
-/* Style the sidenav links and the dropdown button */
-.sidenav a, .dropdown-btn {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  border: none;
-  background: none;
-  width:100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
 .sidenav {
   height: 100%;
   width: 0;
@@ -188,7 +160,7 @@ html {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--color-primary);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -198,7 +170,7 @@ html {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;
   display: block;
   transition: 0.3s;
 }
