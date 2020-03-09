@@ -212,6 +212,12 @@ html {
   padding-right: 8px;
 }
 
+.navigation_checkbox:checked~.navigation_nav{
+	opacity: 1;
+	width: 100%;
+	visibility: visible;
+}
+
 @media only screen and (max-width: 600px) {
   html {
     font-size: 35% !important;
