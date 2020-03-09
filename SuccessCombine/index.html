@@ -12,22 +12,25 @@
 </head>
 
 <body>
-    <div class="sidenav">
-        <input type="checkbox" class="navigation_checkbox" id="navi-toggle">
-        <a href="#about">Children slaves</a>
-        <a href="#services">Females</a>
-        <a href="#clients">males</a>
-        <a href="#contact">Elderly</a>
-        <button class="dropdown-btn">Dropdown
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-        </div>
-        <a href="#contact">Search</a>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
       </div>
+
+      <span class="nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+      
+      <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+      </script>
     <div class="body-one">
         <header>
         </header>
