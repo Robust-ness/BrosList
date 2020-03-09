@@ -1,0 +1,222 @@
+:root {
+  --color-primary: rgb(53, 123, 166);
+  --color-secondary: rgb(194, 194, 194);
+
+  --default-font-size: 2rem;
+  --default-font-family: "Lato";
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--default-font-family);
+  background-color: var(--color-white);
+  background-color: white;
+  color: black;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 5;
+  margin-top: 5rem;
+}
+
+.user-search {
+  background: var(--color-primary);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.display {
+  height: 80vh;
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(224, 84, 24, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    url(../img/main.jpg);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.user-search-banner{
+    margin: 1rem;
+}
+.item-search {
+  width: 60rem;
+  height: 5rem;
+}
+
+.headers {
+  color: white;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-main {
+  text-align: center;
+  width: 100%;
+  font-size: 10rem;
+  margin-top: 7rem;
+}
+
+.header-sub {
+  text-align: center;
+  width: 100%;
+  font-size: 8rem;
+  margin-top: 5rem;
+}
+
+.user-search {
+  font-size: 3rem;
+}
+
+.text-area {
+  font-size: 3rem;
+}
+
+.item-panel {
+  height: 40rem;
+  width: 100%;
+  padding: 5rem;
+  background-color: var(--color-secondary);
+  display: flex;
+  justify-content: space-around;
+  height: 60vh;
+}
+
+.card {
+  background-color: var(--color-primary);
+  width: 30%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-label {
+  font-size: 5rem;
+  width: 100%;
+  text-align: center;
+}
+
+.card-image {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+}
+.header-global {
+  width: 100%;
+  height: 5rem;
+  background-color: white;
+}
+
+.login {
+  float: right;
+  margin-right: 2rem;
+  font-size: 3rem;
+  color: black;
+  background-image: url(../img/icon1.jpg);
+}
+
+.btn {
+	transition: all 1s ease;
+	background-color: white;
+	font-size: 20px;
+	text-decoration: none;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.btn:hover {
+	background-color: var(--color-primary);
+	transform: scale(1.05);
+	box-shadow: 0 8 16 rgba(155,155,7);
+}
+
+.btn-continue {
+	color: white;
+	font-family: 'Fjalla One', sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 35% !important;
+  }
+  .card-label {
+    font-size: 300%;
+  }
+}
