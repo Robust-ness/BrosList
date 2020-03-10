@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="overlay-background"></div>
     <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">About</a>
@@ -21,15 +22,16 @@
         <a href="#">Contact</a>
       </nav>
 
-      <span class="nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
       
       <script>
       function openNav() {
         document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("overlay-background").style.visibility = "visible";
       }
       
       function closeNav() {
         document.getElementById("mySidenav").style.width = "0";
+        document.getElementById("overlay-background").style.visibility = "hidden";
       }
       </script>
     <div class="body-one">
@@ -37,6 +39,7 @@
         </header>
         <section class="display">
             <div class="header-global">
+                <span class="nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
                 <span class="login">Log In</span>
             </div>
            <div class="headers">

@@ -123,6 +123,8 @@ html {
   width: 100%;
   height: 5rem;
   background-color: white;
+  position: fixed;
+  z-index: 1000;
 }
 
 .login {
@@ -153,11 +155,19 @@ html {
 	font-family: 'Fjalla One', sans-serif;
 }
 
+#overlay-background{
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  visibility: hidden;
+}
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1001;
   top: 0;
   left: 0;
   background-color: var(--color-primary);
@@ -185,8 +195,4 @@ html {
   right: 25px;
   font-size: 36px;
   margin-left: 50px;
-}
-
-.nav-button{
-  position: fixed;
 }
