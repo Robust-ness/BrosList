@@ -196,3 +196,15 @@ html {
   font-size: 36px;
   margin-left: 50px;
 }
+
+.tabcontent {
+  float: right;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 100%;
+  border-left: none;
+  height: 300px;
+  display: none;
+  background-color: white;
+  color: black;
+}
