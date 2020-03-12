@@ -1,0 +1,63 @@
+:root{
+	--grid-width:114rem;
+	--gutter-vertical:8rem;
+	--gutter-horizontal:6rem;
+}
+
+*,*::after,*::before{
+	box-sizing:inherit;
+	margin: 0;
+	padding: 0;
+}
+
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.row{
+	max-width: 114rem;
+	background-color: rgba(0, 0, 0, 0);
+	margin: 0 auto;
+}
+[class^="col-"]{
+	float:left;
+}
+[class^="col-"]:not(:last-child){
+margin-right:var(--gutter-horizontal);
+}
+.col-1-of-2{
+	width: calc((100% - 6rem)/2);
+}
+.col-2-of-3{
+    /*width: calc((100% - 6rem) - ((100% - 12rem)/3)); */
+    width: calc((2*(100% - 12rem)/3) + 6rem);
+}	
+.col-1-of-3{
+	width: calc((100% - 12rem)/3);
+}
+.col-1-of-4{
+	width: calc((100% - 18rem)/4);
+}
+.col-2-of-4{
+    /*width: calc((100% - 12rem) - (((100% - 18rem)/4)*2)); */
+    width: calc((2*(100% - 18rem)/4) + 6rem);
+}
+.col-3-of-4{
+    /*width: calc((100% - 6rem) - ((100% - 18rem)/4)); */
+    width: calc((3*(100% - 18rem)/4) + 12rem);
+}
+@media only screen and (max-width: 900px){
+	.section-3 .row{
+		max-width: 75rem;
+	}
+}
+@media only screen and (max-width: 600px){
+	[class^="col-"]{
+		width: 	100%;
+	}
+	.section-3 .row{
+		max-width: 23rem;
+	}
+}
