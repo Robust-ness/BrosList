@@ -16,6 +16,8 @@ html {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    padding-top: 3%;
+    padding-left: 15%;
 }
 .item-name{
     font-size: 3rem;
