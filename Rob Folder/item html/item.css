@@ -5,29 +5,44 @@ html {
 
 .item{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 0.6rem solid black;
+    background-image: linear-gradient(
+        to bottom right, 
+        rgba(224, 84, 24, .1),
+		rgba(255,255,255,.1)),
+    url(main.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-color: darkblue;
 }
 
 .item-image{
-    width: 20%;
+    margin-top: 2%;
+    width: 35rem;
+    border: 0.2rem solid black;
 }
 
 .item-information{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    padding-top: 3%;
-    padding-left: 15%;
 }
+
 .item-name{
     font-size: 3rem;
 }
+
 .item-description{
     font-size: 2rem;
 }
+
 .seller-review{
     font-size: 2rem;
 }
 
-
-
+.recommend-header{
+    font-size: 3rem;
+    padding-left: 10%;
+}
