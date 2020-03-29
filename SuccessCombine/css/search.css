@@ -46,13 +46,8 @@ input, button
 
 #cover
 {
-    position: absolute;
-    top: 60%;
-    left: 0;
-    right: 0;
-    width: 550px;
-    padding: 35px;
-    margin: -83px auto 0 auto;
+    width: 80rem;
+    padding: 1rem;
     background-color: var(--color-secondary);
     border-radius: 1rem;
     box-shadow: 0 10px 40px var(--color-secondary), 0 0 0 10px var(--color-primary);
