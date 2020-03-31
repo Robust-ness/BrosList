@@ -17,28 +17,42 @@
     <div id="overlay-background"></div>
     <nav id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#" class="tablinks" onmouseover="openCity(event, 'About')">About</a>
-        <a href="#" class="tablinks" onmouseover="openCity(event, 'Services')">Services</a>
-        <a href="#" class="tablinks" onmouseover="openCity(event, 'Clients')">Clients</a>
-        <a href="#" class="tablinks" onmouseover="openCity(event, 'Contact')">Contact</a>
-
-        <div id="About" class="tabcontent">
-            <h3></h3>
-            <p>London is the capital city of England.</p>
-          </div>
-          
-          <div id="Services" class="tabcontent">
-            <h3>Paris</h3>
-            <p>Paris is the capital of France.</p>
-          </div>
-          
-          <div id="Clients" class="tabcontent">
-            <h3>Tokyo</h3>
-            <p>Tokyo is the capital of Japan.</p>
-          </div>
-
+        <a href="#" class="tablinks" onmouseover="openCity(event, 'About')">Fashion</a>
+        <a href="#" class="tablinks" onmouseover="openCity(event, 'Services')">Electronics</a>
+        <a href="#" class="tablinks" onmouseover="openCity(event, 'Clients')">Music</a>
+        <a href="#" class="tablinks" onmouseover="openCity(event, 'Contact')">Sporting goods</a>
 
       </nav>
+      <div id="About" class="tabcontent">
+        <a href="" class="btn">Men's clothing</a>
+        <a href="" class="btn">Men's clothing</a>
+        <a href="" class="btn">Men's clothing</a>
+        <a href="" class="btn">Men's clothing</a>
+        <a href="" class="btn">Men's clothing</a>
+      </div>
+      
+      <div id="Services" class="tabcontent">
+        <a href="" class="btn">Computer's tablets and more</a>
+        <a href="" class="btn">Computer's tablets and more</a>
+        <a href="" class="btn">Computer's tablets and more</a>
+        <a href="" class="btn">Computer's tablets and more</a>
+        <a href="" class="btn">Computer's tablets and more</a>
+      </div>
+      
+      <div id="Clients" class="tabcontent">
+        <a href="" class="btn">Rob's music</a>
+        <a href="" class="btn">Rob's music</a>
+        <a href="" class="btn">Rob's music</a>
+        <a href="" class="btn">Rob's music</a>
+        <a href="" class="btn">Rob's music</a>
+      </div>
+      <div id="Contact" class="tabcontent">
+        <a href="" class="btn">Track clothes</a>
+        <a href="" class="btn">Track clothes</a>
+        <a href="" class="btn">Track clothes</a>
+        <a href="" class="btn">Track clothes</a>
+        <a href="" class="btn">Track clothes</a>
+      </div>
 
       
       <script>
@@ -80,31 +94,33 @@
         <section class="display">
             <div class="header-global">
               <div class="header-left">
-                <span class="nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span class="btn nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
               </div>
               <div class="header-right">
-                <a href="" class="button login">Log In</a>
-                <a href="" class="button cart">Cart</a>
+                <a href="" class="btn login">Log In</a>
+                <a href="" class="btn cart">Cart</a>
               </div>
             </div>
            <div class="headers">
                <h1 class="header-main">Buy beautiful products, faster.</h1>
                <h1 class="header-sub">Broslist offers the widest selection of high quality goods.</h1>
-           </div>
-
-           <div id="cover">
-            <form method="get" action="">
-              <div class="tb">
-                <div class="td"><input type="text" placeholder="Search" required></div>
-                <div class="td" id="s-cover">
-                  <button type="submit">
-                    <div id="s-circle"></div>
-                    <span></span>
-                  </button>
-                </div>
+               <div id="cover">
+                <form method="get" action="">
+                  <div class="tb">
+                    <div class="td"><input type="text" placeholder="Search" required></div>
+                    <div class="td" id="s-cover">
+                      <button type="submit">
+                        <div id="s-circle"></div>
+                        <span></span>
+                      </button>
+                    </div>
+                  </div>
+                </form>
               </div>
-            </form>
-          </div>
+           </div>
+           
+
+      
           
         </section>
     
@@ -187,8 +203,9 @@
 
     </div>
 
-    <div class="switch">Dark mode:              
-        <span class="inner-switch">OFF</span>
+    <div class="switch">Dark mode:      
+      <input type="checkbox" class="darkmode-checkbox" id="darkmode-toggle">        
+        <span for="darkmode-toggle" class="inner-switch">OFF</span>
     </div>
 
 

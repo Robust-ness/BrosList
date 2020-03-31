@@ -11,7 +11,6 @@
     font-family: var(--default-font-family);
     background-color: var(--color-white);
     background-color: white;
-    color: black;
   }
   
   *,
@@ -46,12 +45,14 @@ input, button
 
 #cover
 {
-    width: 80rem;
+    width: 50%;
+    margin-left: 10rem;
     padding: 1rem;
     background-color: var(--color-secondary);
     border-radius: 1rem;
     box-shadow: 0 10px 40px var(--color-secondary), 0 0 0 10px var(--color-primary);
-    transform: scale(0.6);
+    transform: scale(.5);
+    transform-origin: 0% 100%;
 }
 
 form
