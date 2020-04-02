@@ -12,7 +12,7 @@ html {
         to bottom right, 
         rgba(224, 84, 24, .1),
 		rgba(255,255,255,.1)),
-    url(main.jpg);
+    url(../main.jpg);
     background-size: cover;
     background-position: bottom;
     background-color: darkblue;
@@ -20,6 +20,7 @@ html {
 
 .item-image{
     margin-top: 2%;
+    margin-bottom: 2%;
     width: 35rem;
     border: 0.2rem solid black;
 }
@@ -28,6 +29,8 @@ html {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    color: black;
+    padding-left: 5%;
 }
 
 .item-name{
@@ -37,12 +40,12 @@ html {
 .item-description{
     font-size: 2rem;
 }
-
-.seller-review{
-    font-size: 2rem;
-}
-
-.recommend-header{
+.seller-review-text{
     font-size: 3rem;
-    padding-left: 10%;
+}
+.seller-review{
+    font-size: 3rem;
+}
+.checked{
+    color: orange;
 }
