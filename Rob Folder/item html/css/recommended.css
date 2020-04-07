@@ -9,7 +9,7 @@
 .recommended-item-row{
     display: flex;
     justify-content: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: white;
     margin: 0 auto;
     width: 75%;
@@ -42,4 +42,12 @@
     color: black;
     padding-bottom: 3vh;
     padding-top: 3vh;
+    height: 8%;
+    width: 100%;
+    overflow: hidden;
+}
+.read-more{
+    font-size: 1.5rem;
+    font-family: 'Lato';
+    color: black;
 }
