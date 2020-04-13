@@ -1,0 +1,48 @@
+:root {
+    --color-primary: rgb(53, 123, 166);
+    --color-secondary: rgb(194, 194, 194);
+  
+    --default-font-size: 2rem;
+    --default-font-family: "Lato";
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: var(--default-font-family);
+    background-color: var(--color-white);
+    background-color: white;
+  }
+  
+  *, *::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container{
+      margin-top: 10rem;
+      color: black;
+      text-align: center;
+      background-color: var(--color-secondary);
+      padding: 5rem;
+  }
+
+h1{
+    margin: 3rem;
+}
+
+input{
+  object-position: center;
+}
+
+button{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 3rem;
+}
