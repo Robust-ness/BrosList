@@ -9,7 +9,7 @@
 html {
   font-size: 62.5%;
   font-family: var(--default-font-family);
-  background-color: white;
+  background-color: var(--color-primary);
 }
 
 *,
@@ -20,13 +20,21 @@ html {
   box-sizing: border-box;
 }
 
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
-  margin-top: 10rem;
   color: black;
   text-align: center;
-  background-color: var(--color-secondary);
+  background-color: white;
   padding: 5rem;
+  width: 50%;
+  height: fit-content;
 }
+
 
 h1 {
   margin: 3rem;
@@ -36,8 +44,20 @@ input {
   object-position: center;
 }
 
-.button {
-  padding-top: 3rem;
+.btn {
+  font-size: 2rem;
+  color: black;
+  transition: all .25s ease;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin: 3rem;
+  width: 70%;
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
 }
 
 .top-header {
