@@ -33,6 +33,9 @@ body{
   padding: 5rem;
   width: 50%;
   height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -53,13 +56,29 @@ input {
   border: none;
   cursor: pointer;
   margin: 3rem;
-  width: 70%;
+  width: 50%;
+  background-color: lightskyblue;
+}
+
+.button-container{
+  text-align: center;
 }
 
 .btn:hover {
-  background-color: var(--color-primary);
+  background-color:var(--color-primary);
 }
 
 .top-header {
   font-size: 3rem;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+a{
+  text-decoration: none;
 }
