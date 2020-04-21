@@ -1,0 +1,23 @@
+@media only screen and (min-width: 100px) and (max-width: 400px) {
+    .recommended-item-image{
+        padding: 3%;
+        width: 150%;
+        border-radius: 10%;
+    }
+    .recommended-item-description{
+        font-size: 1rem;
+        height: 8%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .recommended-item-name{
+        font-size: 2rem;
+        font-family: 'Lato';
+        color: black;
+    }
+    .read-more{
+        font-size: 1rem;
+        font-family: 'Lato';
+        color: black;
+    }
+  }
