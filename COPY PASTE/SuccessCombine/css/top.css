@@ -1,0 +1,233 @@
+:root {
+  --color-primary: rgb(53, 123, 166);
+  --color-secondary: rgb(194, 194, 194);
+
+  --default-font-size: 2rem;
+  --default-font-family: "Lato";
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--default-font-family);
+  background-color: var(--color-white);
+  background-color: white;
+  color: white;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 5;
+  margin-top: 5rem;
+}
+.user-search {
+  background: var(--color-primary);
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 3rem;
+}
+.user-search-banner {
+  margin: 1rem;
+  padding-right: 1rem;
+}
+.item-search {
+  width: 30rem;
+  height: 3rem;
+}
+.search-button {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.display {
+  height: 110vh;
+  /* background-image: linear-gradient(
+      to bottom ,
+      rgba(53, 123, 166, 0.8),
+      rgb(0,0,0,1)
+    ); */
+  background-image: url(../img/background-clip.jpg);
+  background-position: left;
+  background-size: cover;
+}
+
+.headers {
+  display: flex;
+  position: relative;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header-main {
+  color: white;
+  text-align: left;
+  width: 30%;
+  font-size: 5rem;
+  margin-top: 10rem;
+  margin-left: 10rem;
+}
+
+.header-sub {
+  color: rgba(255, 255, 255, 0.8);
+  text-align: left;
+  width: 25%;
+  font-size: 3rem;
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+
+.text-area {
+  font-size: 3rem;
+}
+
+.item-panel {
+  height: 60vh;
+  width: 100%;
+  padding: 5rem;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: white;
+  width: 20%;
+  height: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-label {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+
+.card-label:hover {
+  text-decoration-style: underline;
+}
+
+.card-image {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+.header-global {
+  width: 100%;
+  height: 5rem;
+  background-color: var(--color-primary);
+  position: fixed;
+  z-index: 999;
+}
+.header-left {
+  float: left;
+}
+.header-right {
+  width: 20%;
+  float: right;
+  height: 100%;
+  padding: 1rem;
+}
+
+.btn {
+  margin-left: 3rem;
+  font-size: 2rem;
+  color: black;
+  background-image: url(../img/icon1.jpg);
+  transition: all 1s ease;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 0 8 16 rgba(155, 155, 7);
+}
+
+.btn-continue {
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+}
+
+/* .darkmode-checkbox:checked~ * {
+  transform: 
+} */
+
+#overlay-background {
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  visibility: hidden;
+}
+
+.nav-button {
+  border-radius: black 4px;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1001;
+  top: 0;
+  left: 0;
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: black;
+  background-color: white;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+}
+
+.tabcontent {
+  z-index: 1001;
+  margin-left: 250px;
+  margin-top: 5rem;
+  float: right;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 30%;
+  border-left: none;
+  height: 100%;
+  display: none;
+  background-color: var(--color-primary);
+  position: fixed;
+}
