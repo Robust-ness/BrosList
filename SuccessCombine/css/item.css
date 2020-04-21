@@ -1,0 +1,76 @@
+:root {
+    --color-primary: rgb(3, 165, 252);
+    --color-secondary: rgb(194, 194, 194);
+  
+    --default-font-size: 2rem;
+    --default-font-family: "Lato";
+  }
+  
+  html {
+    font-size: 62.5%;
+    font-family: var(--default-font-family);
+    background-color: var(--color-white);
+    background-color: white;
+    color: black;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .item-info{
+      display: flex;
+      align-items: center;
+      height: 110vh;
+      width: 100%;
+      position: relative;
+  }
+
+  .item-text{
+    height: 110vh;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+
+  .item-name{
+      margin-top: 5rem;
+      font-size: 5rem;
+  }
+
+  .item-description{
+    margin-top: 1rem;
+    font-size: 2rem;
+    padding: 2rem;
+  }
+
+  form{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+  }
+
+  label{
+      font-size: var(--default-font-size);
+  }
+  a{
+      color: black;
+      font-size: var(--default-font-size);
+      background-color: var(--color-primary);
+      margin: 1rem;
+  }
+
+  input{
+      width: 30%;
+      margin: 1rem;
+  }
+
+  .price-tag{
+      font-size: var(--default-font-size);
+  }
+
