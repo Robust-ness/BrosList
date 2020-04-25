@@ -75,7 +75,7 @@ input {
 form{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   width: 50%;
 }
 
