@@ -1,0 +1,36 @@
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 35% !important;
+  }
+  .card-label {
+    font-size: 300%;
+  }
+  .item-image {
+    padding: 3%;
+    width: 85%;
+  }
+  .item-name {
+    font-size: 1rem;
+  }
+  .item-description {
+    font-size: 0.1rem;
+  }
+  .item-panel {
+    height: 33vh;
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+  .item-panel {
+    height: 38vh;
+  }
+}
