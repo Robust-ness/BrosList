@@ -16,9 +16,9 @@
     <form id="createAccount" action="">
       <p class="top-header">Create Account</p>
       <h1>First Name</h1>
-      <input id="first-name"" type="text" />
+      <input id="firstName" type="text" />
       <h1>Last Name</h1>
-      <input id="last-name" type="text" />
+      <input id="lastName" type="text" />
       <h1>Email</h1>
       <input id="email" type="text" />
       <h1>Password</h1>
@@ -32,6 +32,7 @@
     </form>
     <script>
       document.getElementById('createAccount').addEventListener('submit', (e) => {
+        console.log('okay')
           e.preventDefault()
           let formdata = new FormData();
           formdata.append('firstName', document.getElementById('firstName').value)

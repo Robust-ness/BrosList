@@ -32,6 +32,7 @@ router.get('/createaccount', async (req, res) => {
 
 router.post("/users", upload.none(), async (req, res) => {
   try {
+    console.log('creating: ' + req.body.email)
     if (await User.exists({username: req.body.username}) || await User.exists({email: req.body.email})) {
       throw new Error('Similar Account Already Exists.')
     }
