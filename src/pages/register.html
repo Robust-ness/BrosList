@@ -48,6 +48,9 @@
             body: formdata
         })
         console.log(await response.json())
+        if (await response.json() == 'Account Created Successfully') {
+          window.location.replace("/nextsteps");
+        }
     })
 </script>
 </body>
