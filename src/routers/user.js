@@ -51,7 +51,7 @@ router.post("/users", upload.none(), async (req, res) => {
     });
     const mailOptions = {
       from: 'broslist.helpdesk@gmail.com',
-      to: 'adambougaev@gmail.com',
+      to: req.body.email,
       subject: 'BrosList Account Verification',
       html:
            `
