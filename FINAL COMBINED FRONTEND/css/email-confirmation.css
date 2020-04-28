@@ -20,12 +20,12 @@ html {
   box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.main{
+.main {
   margin: 10%;
   background-color: white;
   width: 50%;
@@ -37,19 +37,19 @@ body{
   height: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-.text{
+.text {
   text-align: center;
   padding: 2rem;
 }
 
-p{
+p {
   font-size: 3rem;
 }
 
 .btn {
   font-size: 2rem;
   color: black;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
   text-decoration: none;
   text-align: center;
   border: none;
