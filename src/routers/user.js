@@ -60,7 +60,7 @@ router.post("/users", upload.none(), async (req, res) => {
           <div class="main">
               <div><h1 class="text">Welcome to Broslist!</h1></div>
               <div><p class="text">This email will allow you to activate your account at Broslist so you can buy more high quality goods!</p></div>
-              <a href="google.com">Validate Now!</a>
+              <a href="127.0.0.1:3000/verify/${jwt.sign(req.body.email, 'emailconfirm')}">Validate Now!</a>
           </div>
           
           `
@@ -77,7 +77,7 @@ router.post("/users", upload.none(), async (req, res) => {
 });
 
 router.get('/verify/:id', async (req, res) => {
-  let user = await User.findOne({email: jwt.verify(req.params.id, 'emailvalidate')})
+  let user = await User.findOne({email: jwt.verify(req.params.id, 'emailconfirm')})
   await User.findByIdAndUpdate(user._id.toString(), {willExpireIn: null}, {new: true})
   res.send(user)
 })
