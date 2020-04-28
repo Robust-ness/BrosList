@@ -27,7 +27,7 @@ const path = require('path')
 //Account Creation
 
 router.get('/createaccount', async (req, res) => {
-  res.sendFile(path.join(__dirname, '../', 'pages', 'createaccount.html'))
+  res.sendFile(path.join(__dirname, '../', 'pages', 'register.html'))
 })
 
 router.post("/users", upload.none(), async (req, res) => {
