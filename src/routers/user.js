@@ -6,7 +6,8 @@ const auth = require('../middleware/auth')
 const upload = require('../middleware/upload')
 const bcrypt = require('bcryptjs')
 const nodemailer = require('nodemailer')
-
+const fs = require('fs')
+const jwt = require('jsonwebtoken')
 const router = new express.Router();
 const path = require('path')
 
@@ -26,7 +27,7 @@ const path = require('path')
 //Account Creation
 
 router.get('/createaccount', async (req, res) => {
-  res.sendFile(path.join(__dirname, '../', 'pages', 'new.html'))
+  res.sendFile(path.join(__dirname, '../', 'pages', 'createaccount.html'))
 })
 
 router.post("/users", upload.none(), async (req, res) => {
@@ -37,13 +38,48 @@ router.post("/users", upload.none(), async (req, res) => {
     const user = new User(req.body);
     await user.save();
     const token = await user.generateToken()
+
     //res.send({user, token});
-    console.log(bcrypt.hash(req.body.email, 8))
+    //console.log(bcrypt.hash(req.body.email, 8))
     //res.redirect('/nextsteps').send
+    const transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: 'broslist.helpdesk@gmail.com',
+        pass: 'whalensucks'
+      }
+    });
+    const mailOptions = {
+      from: 'broslist.helpdesk@gmail.com',
+      to: 'adambougaev@gmail.com',
+      subject: 'BrosList Account Verification',
+      html:
+           `
+
+          <div class="main">
+              <div><h1 class="text">Welcome to Broslist!</h1></div>
+              <div><p class="text">This email will allow you to activate your account at Broslist so you can buy more high quality goods!</p></div>
+              <a href="google.com">Validate Now!</a>
+          </div>
+          
+          `
+    };
+    transporter.sendMail(mailOptions, function (err, info) {
+      if(err)
+        console.log(err)
+      else
+        console.log(info);
+    });
   } catch (e) {
     res.status(400).send(e);
   }
 });
+
+router.get('/verify/:id', async (req, res) => {
+  let user = await User.findOne({email: jwt.verify(req.params.id, 'emailvalidate')})
+  await User.findByIdAndUpdate(user._id.toString(), {willExpireIn: null}, {new: true})
+  res.send(user)
+})
 
 router.get('/nextsteps', async (req, res) => {
   try {
