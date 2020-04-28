@@ -265,3 +265,4 @@ label #cancel {
 #check:checked ~ label #cancel {
   left: 12rem;
 }
+
