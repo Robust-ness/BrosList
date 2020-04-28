@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="../public/css/signin-register.css" />
+  <link rel="stylesheet" href="/css/signin-register.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="img/icon.png" />
-  <link rel="stylesheet" href="../public/css/mediaquery.css">
+  <link rel="stylesheet" href="/css/mediaquery.css">
   <title>BrosList</title>
 </head>
 
 <body>
   <div class="container">
-    <form action="">
+    <form id="createAccount" action="">
       <p class="top-header">Create Account</p>
       <h1>Your Name</h1>
       <input class="name" type="text" />
@@ -28,6 +28,23 @@
       </div>
       <a href="">Reset Password</a>
     </form>
+    <script>
+      document.getElementById('createAccount').addEventListener('submit', (e) => {
+          e.preventDefault()
+          let formdata = new FormData();
+          formdata.append('firstName', document.getElementById('firstName').value)
+          formdata.append('lastName', document.getElementById('lastName').value)
+          formdata.append('username', document.getElementById('username').value)
+          formdata.append('password', document.getElementById('password').value)
+          formdata.append('email', document.getElementById('email').value)
+          console.log(formdata.get('firstName'))
+          fetch('/users', {
+              method: 'POST',
+              body: formdata
+          })
+          console.log(document.getElementById('firstName').value)
+      })
+  </script>
   </div>
 </body>
 
