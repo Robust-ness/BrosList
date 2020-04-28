@@ -5,27 +5,22 @@ const productSchema = mongoose.Schema({
         type: String,
         required: true
     },  
-    reviewScore: {
-        type:Number,
-        min: 1,
-        max: 5,
-        required: true
-    },
-    reviewText: {
-        type: String,
-        required: true
-    },
+
+   
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "User"
     },
+    itemPicture: {
+        type: Buffer
+    }
 },
 {
     timestamps: true
 }
 )
 
-const Product = mongoose.model('product', reviewSchema)
+const Product = mongoose.model('product', productSchema)
 
 module.exports = Product

@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.port || 3000;
 const bodyParser = require('body-parser')
 require("./db/mongoose");
-const movieRouter = require('./routers/movies')
+const productRouter = require('./routers/product')
 const userRouter = require('./routers/user')
 const reviewRouter = require('./routers/review')
 const bcrypt = require('bcryptjs')
@@ -25,7 +25,7 @@ const path = require('path')
 // console.log(thing)
 
    app.use(express.json())
-      .use(movieRouter)
+      .use(productRouter)
       .use(express.urlencoded({extended: false}))
       .use(express.static(__dirname + '/public'))
       .use(userRouter)
