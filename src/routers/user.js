@@ -70,7 +70,7 @@ router.post("/users", upload.none(), async (req, res) => {
         throw new Error(err)
       else
         console.log(info);
-        res.send('Account Created Successfully')
+        res.send({status: 'Account Created Successfully'})
     });
   } catch (e) {
     res.status(400).send(e);
@@ -95,7 +95,7 @@ router.get('/nextsteps', async (req, res) => {
   //   //console.log(user)
   //   //res.send(user)
   //   //res.send(await User.findById('5e92ab74452d095eb8803bba').firstName)
-  // } catch (error) {
+   } catch (error) {
     
   }
 })
