@@ -34,15 +34,14 @@ router.post("/users", upload.none(), async (req, res) => {
   try {
     console.log('creating: ' + req.body.email)
     if (await User.exists({username: req.body.username}) || await User.exists({email: req.body.email})) {
+      console.log('up my ass')
+      res.send({message : 'Similar Account Already Exists.'})
       throw new Error('Similar Account Already Exists.')
     }
     const user = new User(req.body);
     await user.save();
     const token = await user.generateToken()
 
-    //res.send({user, token});
-    //console.log(bcrypt.hash(req.body.email, 8))
-    //res.redirect('/nextsteps').send
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
