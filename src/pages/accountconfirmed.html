@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../public/css/thankyou.css">
-    <link rel="stylesheet" href="../public/css/mediaquery.css">
+    <link rel="stylesheet" href="/css/thankyou.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="main">
         <h1 class="text">Welcome to Broslist!</h1>
-        <p class="text">Your account has been confirmed! In 5 seconds you will be redirected to the home page.</p>
+        <p class="text">Your account has been confirmed! In 5 seconds you will be redirected to the Login Screen.</p>
     </div>
+    <script>
+        setTimeout(async () => {
+            window.location.replace('/login')
+        }, 5000)
+    </script>
 </body>
 
 </html>

@@ -4,30 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="../public/css/signin-register.css">
+    <link rel="stylesheet" href="/css/signin-register.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
-    <link rel="stylesheet" href="../public/css/mediaquery.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
     <title>BrosList</title>
 </head>
 
 <body>
     <div class="container">
 
-        <form action="">
+        <form id="login">
             <p class="top-header">Sign In</p>
-            <h1>Your Name</h1>
-            <input class="field-name" type="text">
             <h1>Email</h1>
-            <input class="field-email" type="text">
+            <input class="field-email" id="email" type="text" required>
             <h1>Password</h1>
-            <input class="field-password" type="password">
+            <input class="field-password" id="password" type="password" required>
             <div class="button-container">
                 <input type="submit" class="btn">
             </div>
             <a href="">Reset Password</a>
         </form>
-
+        <script type="module" src="/scripts/login.js"></script>
     </div>
 </body>
 

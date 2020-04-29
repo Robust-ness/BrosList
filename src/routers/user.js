@@ -79,7 +79,7 @@ router.post("/users", upload.none(), async (req, res) => {
 router.get('/verify/:id', async (req, res) => {
   let user = await User.findOne({email: jwt.verify(req.params.id, 'emailconfirm')})
   await User.findByIdAndUpdate(user._id.toString(), {willExpireIn: null}, {new: true})
-  res.send(user)
+  res.sendFile(path.join(__dirname, '../', 'pages', 'accountconfirmed.html'))
 })
 
 router.get('/nextsteps', async (req, res) => {
@@ -98,6 +98,25 @@ router.get('/nextsteps', async (req, res) => {
     
   }
 })
+
+router.get('/login', async (req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'signin.html'))
+})
+
+router.post("/login", async (req, res) => {
+  try {
+    const user = await User.findByCredentials(
+      req.body.email,
+      req.body.password
+    );
+    const token = await user.generateToken();
+
+    res.send({ user, token });
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+});
 
 
 
@@ -119,20 +138,7 @@ router.get('/users/me', auth, async (req,res) => {
 })
 
 
-router.post("/users/login", async (req, res) => {
-  try {
-    const user = await User.findByCredentials(
-      req.body.email,
-      req.body.password
-    );
-    const token = await user.generateToken();
 
-    res.send({ user, token });
-  } catch (error) {
-    console.log(error);
-    res.status(400).send(error);
-  }
-});
 
 router.post("/users/logout", auth, async (req, res) => {
   try {
