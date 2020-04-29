@@ -13,7 +13,7 @@ router.post("/products/create", upload.single('itemPicture'), auth, async (req, 
     }
     //console.log(req.body, req.user, req.file.buffer)
     const product = new Product({ ...req.body, owner: req.user._id, itemPicture: req.file.buffer });
-    await product.save();
+    console.log(await product.save());
     res.send(product);
   } catch (e) {
     res.status(400).send(e);

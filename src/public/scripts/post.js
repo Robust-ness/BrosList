@@ -17,6 +17,7 @@ document.getElementById('post').addEventListener('submit', async (e) => {
             'Authorization': `Bearer ${Cookies.get('sessionToken')}`
         }
     })
+    console.log(await res.json())
 })
 
 if (!Cookies.get('sessionToken')) {
