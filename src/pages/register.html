@@ -49,7 +49,7 @@
         response = await response.json()
         console.log(response)
         if (response.status == 'Account Created Successfully') {
-          //window.location.replace("/nextsteps");
+          window.location.replace("/nextsteps");
         } else if(response.message.includes('email is invalid')) {
           console.log('butt')
         }
