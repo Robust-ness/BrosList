@@ -1,0 +1,97 @@
+:root {
+  --color-primary: rgb(3, 165, 252);
+  --color-secondary: rgb(194, 194, 194);
+
+  --default-font-size: 2rem;
+  --default-font-family: "Lato";
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--default-font-family);
+  background-color: var(--color-white);
+  background-color: white;
+  color: black;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.search-results{
+  padding-top: 5rem;
+}
+
+.item-info {
+  display: flex;
+  align-items: center;
+  height: 55vh;
+  width: 100%;
+  position: relative;
+  background-color: white;
+  border: solid black 1px;
+  padding-top: 1rem;
+}
+
+.item-text {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.item-name {
+  margin-top: 1rem;
+  font-size: 5rem;
+}
+
+.item-image{
+  height: 100%;
+}
+
+.item-description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  font-size: var(--default-font-size);
+}
+a {
+  color: black;
+  font-size: var(--default-font-size);
+  background-color: var(--color-primary);
+  margin: 1rem;
+}
+
+input {
+  width: 30%;
+  margin: 1rem;
+}
+
+.price-tag {
+  font-size: 4rem;
+}
+
+.seller-review-text {
+  font-size: 2rem;
+}
+.seller-review {
+  font-size: 2rem;
+  width: 100%;
+}
+.checked {
+  color: orange;
+}
