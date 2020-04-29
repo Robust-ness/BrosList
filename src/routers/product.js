@@ -56,6 +56,7 @@ router.patch("/products/:id", async (req, res) => {
 
 router.delete("/products/:id", async (req, res) => {
   try {
+    //  if (Product.findById(req.params.id).owner =  )
     const product = await Product.findByIdAndDelete(req.params.id);
 
     if (!product) {
