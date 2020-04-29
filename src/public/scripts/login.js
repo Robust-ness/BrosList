@@ -24,6 +24,7 @@ document.getElementById('login').addEventListener('submit', async (e) => {
         }
     } else {
         Cookies.set('sessionToken', response.token)
+        window.location.replace('/')
     }
     
 })
