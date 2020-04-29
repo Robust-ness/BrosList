@@ -14,6 +14,10 @@ const productSchema = mongoose.Schema({
     },
     itemPicture: {
         type: Buffer
+    },
+    price: {
+        type: Number,
+        required: true
     }
 },
 {

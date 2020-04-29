@@ -24,7 +24,8 @@ router.get("/products/:id", async (req, res) => {
 
 router.get("/products/", async (req, res) => {
   try {
-    res.send(product);
+    let products = await Product.find({});
+    res.send(products);
   } catch (error) {
     res.status(400).send(error);
   }
@@ -37,15 +38,6 @@ router.post("/products/create", auth, async (req, res) => {
     res.send(product);
   } catch (e) {
     res.status(400).send(e);
-  }
-});
-
-router.delete("/products/:id", async (req, res) => {
-  try {
-    let product = await Review.findOneAndDelete({ movie: req.params.id });
-    res.send(product);
-  } catch (err) {
-    res.status(500).send(err);
   }
 });
 
@@ -64,12 +56,12 @@ router.patch("/products/:id", async (req, res) => {
 
 router.delete("/products/:id", async (req, res) => {
   try {
-    const user = await User.findByIdAndDelete(req.params.id);
+    const product = await Product.findByIdAndDelete(req.params.id);
 
-    if (!user) {
+    if (!product) {
       return res.status(404).send();
     }
-    res.send(user);
+    res.send(product);
   } catch (error) {
     res.status(500).send(error);
   }
