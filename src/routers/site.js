@@ -1,13 +1,13 @@
 const express = require("express");
 const Review = require("../models/review");
 const auth = require('../middleware/auth')
+const path = require('path')
 
 const router = new express.Router();
 
-router.get('/epic', async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    //res.sendFile(path.join(__dirname, '../', 'pages', 'index.html'))
-    res.send('okay')
+    res.sendFile(path.join(__dirname, '../', 'pages', 'index.html'))
   } catch (error) {
     res.status(400).send(error)
   }

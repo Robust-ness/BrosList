@@ -228,6 +228,4 @@ router.get('/reviews/me', auth, async (req, res) => {
   res.send(req.user.reviews)
 })
 
-
-
 module.exports = router;
