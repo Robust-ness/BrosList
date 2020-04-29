@@ -1,23 +1,34 @@
 const mongoose = require('mongoose')
 
 const productSchema = mongoose.Schema({
-    itemName: {
+    postingTitle: {
         type: String,
         required: true
     },  
-
-   
     owner: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "User"
     },
     itemPicture: {
-        type: Buffer
+        type: Buffer,
+        required: true
+    },
+    city: {
+        type: String,
+        required: true
     },
     price: {
         type: Number,
         required: true
+    },
+    description: {
+        type: String,
+        required: true
+    },
+    quantity: {
+        type: Number,
+        default: 1
     }
 },
 {

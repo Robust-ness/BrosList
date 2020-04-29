@@ -3,7 +3,22 @@ const Review = require("../models/review");
 const auth = require("../middleware/auth");
 const Product = require("../models/product");
 const User = require("../models/user");
+const upload = require('../middleware/upload')
 const router = new express.Router();
+
+router.post("/products/create", upload.single('itemPicture'), auth, async (req, res) => {
+  try {
+    if (req.body.price%1 != 0) {
+      throw new Error('Price Invalid')
+    }
+    //console.log(req.body, req.user, req.file.buffer)
+    const product = new Product({ ...req.body, owner: req.user._id, itemPicture: req.file.buffer });
+    await product.save();
+    res.send(product);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
 
 router.get("/products/:id", async (req, res) => {
   try {
@@ -31,15 +46,7 @@ router.get("/products/", async (req, res) => {
   }
 });
 
-router.post("/products/create", auth, async (req, res) => {
-  try {
-    const product = new Product({ ...req.body, owner: req.user._id });
-    await product.save();
-    res.send(product);
-  } catch (e) {
-    res.status(400).send(e);
-  }
-});
+
 
 router.patch("/products/:id", async (req, res) => {
   try {

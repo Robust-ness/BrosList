@@ -14,26 +14,26 @@
 </head>
 
 <body>
-    <div class="container">
+    <form id="post" class="container">
         <div class="row">
             <div class="col-1-of-3">
                 <h1>Posting title</h1>
-                <input type="text">
+                <input id="postingTitle" type="text">
             </div>
             <div class="col-1-of-3">
                 <h1>Price</h1>
-                <input type="text">
+                <input id="price" type="text">
             </div>
 
             <div class="col-1-of-3">
                 <h1>City</h1>
-                <input type="text">
+                <input id="city" type="text">
             </div>
         </div>
         <div class="row">
             <div class="description-box">
                 <h1>Description</h1>
-                <input type="text" class="input-description">
+                <input id="description" type="text" class="input-description">
             </div>
 
         </div>
@@ -44,7 +44,10 @@
         <div class="button-container">
             <input type="submit" class="btn" />
         </div>
-    </div>
+    </form>
+    <script type="module" src="/scripts/js.cookie.mjs"></script>
+    <script nomodule defer src="/scripts/js.cookie.js"></script>
+    <script type="module" src="/scripts/post.js"></script>
 </body>
 
 </html>
