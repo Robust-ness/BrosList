@@ -34,15 +34,14 @@ router.post("/users", upload.none(), async (req, res) => {
   try {
     console.log('creating: ' + req.body.email)
     if (await User.exists({username: req.body.username}) || await User.exists({email: req.body.email})) {
+      console.log('up my ass')
+      res.send({message : 'Similar Account Already Exists.'})
       throw new Error('Similar Account Already Exists.')
     }
     const user = new User(req.body);
     await user.save();
     const token = await user.generateToken()
 
-    //res.send({user, token});
-    //console.log(bcrypt.hash(req.body.email, 8))
-    //res.redirect('/nextsteps').send
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -67,9 +66,10 @@ router.post("/users", upload.none(), async (req, res) => {
     };
     transporter.sendMail(mailOptions, function (err, info) {
       if(err)
-        console.log(err)
+        throw new Error(err)
       else
         console.log(info);
+        res.send({status: 'Account Created Successfully'})
     });
   } catch (e) {
     res.status(400).send(e);
@@ -84,16 +84,17 @@ router.get('/verify/:id', async (req, res) => {
 
 router.get('/nextsteps', async (req, res) => {
   try {
-    let user = await (await User.findOne({firstName: 'Bob'})).toJSON()
-    //delete user.willExpireIn
+    res.sendFile(path.join(__dirname, '../', 'pages', 'thankyou.html'))
+  //   let user = await (await User.findOne({firstName: 'Bob'})).toJSON()
+  //   //delete user.willExpireIn
 
-    await User.findByIdAndUpdate(user._id.toString(), {willExpireIn: null}, {new: true})
-    res.send(user)
-    //await user.save()
-    //console.log(user)
-    //res.send(user)
-    //res.send(await User.findById('5e92ab74452d095eb8803bba').firstName)
-  } catch (error) {
+  //   await User.findByIdAndUpdate(user._id.toString(), {willExpireIn: null}, {new: true})
+  //   res.send(user)
+  //   //await user.save()
+  //   //console.log(user)
+  //   //res.send(user)
+  //   //res.send(await User.findById('5e92ab74452d095eb8803bba').firstName)
+   } catch (error) {
     
   }
 })
