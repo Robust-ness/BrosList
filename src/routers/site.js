@@ -13,4 +13,8 @@ router.get('/', async (req, res) => {
   }
 })
 
+router.get('/createlisting', async(req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'post.html'))
+})
+
 module.exports = router;

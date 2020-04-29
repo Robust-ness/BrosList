@@ -122,7 +122,9 @@ router.post("/login", async (req, res) => {
   }
 });
 
-
+router.get('/users/my-profile', async (req,res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'profile.html'))
+})
 
 router.get('/users/:id/profilePic', async (req, res) => {
   try {
@@ -140,6 +142,8 @@ router.get('/users/:id/profilePic', async (req, res) => {
 router.get('/users/me', auth, async (req,res) => {
   res.send(req.user)
 })
+
+
 
 
 
