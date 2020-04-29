@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="../css/signin-register.css" />
+  <link rel="stylesheet" href="../public/css/signin-register.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:300%7CSpartan:400,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="img/icon.png" />
   <link rel="stylesheet" href="../css/mediaquery.css">
@@ -33,6 +33,7 @@
       <a href="">Reset Password</a>
     </form>
   </div>
+
   <script>
     document.getElementById('createAccount').addEventListener('submit', async (e) => {
         e.preventDefault()
@@ -51,9 +52,16 @@
         if (response.status == 'Account Created Successfully') {
           window.location.replace("/nextsteps");
         } else if(response.message.includes('email is invalid')) {
-          console.log('butt')
+
+          if (confirm("Your email has already been used, or is invalid")) {
+              console.log('the user has pressed okay')
+          } else {
+              console.log('the user has pressed cancel')
+          }
+          
         }
-    })
+      }
+    )
 </script>
 </body>
 
