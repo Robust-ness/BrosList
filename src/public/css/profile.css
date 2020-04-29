@@ -1,0 +1,83 @@
+.profile-header{
+    font-size: 200%;
+    text-align: center;
+    padding-top: 3%;
+}
+.profile-info{
+    display: flex;
+    font-size: 120%;
+    padding-left: 8%;
+    flex-direction: column;
+}
+.info-name{
+    padding-top: 2%;
+    padding-bottom: 3%;
+}
+.info-username{
+    padding-bottom: 3%;
+}
+.info-email{
+    padding-bottom: 3%;
+}
+.info-rating{
+}
+.checked {
+    color: orange;
+  }
+
+.profile-listings-header{
+    font-size: 200%;
+    padding-left: 12%;
+    padding-top: 5%;
+    padding-bottom: 3%;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    height: 40vh;
+    margin: 0 auto;
+    width: 70%;
+    position: relative;
+    background-color: white;
+    border: solid black 1px;
+    padding-top: 1rem;
+}
+  
+.item-text {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+  
+.item-name {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+  
+.item-image{
+    height: 100%;
+}
+  
+.item-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+}
+
+.item-add{
+    font-size: 1.5rem;
+    border: solid black 1px;
+    text-align: center;
+    width: 70%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.go-back{
+    padding-left: 3%;
+    padding-top: 5%;
+    margin-bottom: 15%;
+    font-size: 2rem;
+}
