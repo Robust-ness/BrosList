@@ -16,5 +16,14 @@ document.getElementById('login').addEventListener('submit', async (e) => {
           },
     })
     response = await response.json()
-    Cookies.set('sessionToken', response.token)
+    if (response.error) {
+        if (confirm("Incorrect Login info")) {
+            console.log('the user has pressed okay')
+        } else {
+            console.log('the user has pressed cancel')
+        }
+    } else {
+        Cookies.set('sessionToken', response.token)
+    }
+    
 })

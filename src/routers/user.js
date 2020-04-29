@@ -36,7 +36,7 @@ router.post("/users", upload.none(), async (req, res) => {
     if (await User.exists({username: req.body.username}) || await User.exists({email: req.body.email})) {
       console.log('up my ass')
       res.send({message : 'Similar Account Already Exists.'})
-      throw new Error('Similar Account Already Exists.')
+      return
     }
     const user = new User(req.body);
     await user.save();
@@ -110,12 +110,15 @@ router.post("/login", async (req, res) => {
       req.body.email,
       req.body.password
     );
+    if (true) {
+      console.log(user)
+    }
     const token = await user.generateToken();
 
     res.send({ user, token });
   } catch (error) {
-    console.log(error);
-    res.status(400).send(error);
+    console.log({error});
+    res.send({error});
   }
 });
 

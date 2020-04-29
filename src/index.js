@@ -6,6 +6,7 @@ require("./db/mongoose");
 const productRouter = require('./routers/product')
 const userRouter = require('./routers/user')
 const reviewRouter = require('./routers/review')
+const siteRouter = require('./routers/site')
 const bcrypt = require('bcryptjs')
 const fs = require('fs')
 const path = require('path')
@@ -30,6 +31,7 @@ const path = require('path')
       .use(express.static(__dirname + '/public'))
       .use(userRouter)
       .use(reviewRouter)
+      .use(siteRouter)
 
 app.listen(port, () => {
   console.log("Listening on port " + port);
