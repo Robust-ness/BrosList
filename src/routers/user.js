@@ -105,6 +105,7 @@ router.get('/login', async (req, res) => {
 
 router.post("/login", async (req, res) => {
   try {
+    console.log(req.body.email)
     const user = await User.findByCredentials(
       req.body.email,
       req.body.password
