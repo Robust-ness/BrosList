@@ -8,7 +8,6 @@ document.getElementById('post').addEventListener('submit', async (e) => {
     formdata.append("price", Number(document.getElementById('price').value))
     formdata.append("city", document.getElementById('city').value)
     formdata.append("description", document.getElementById('description').value)
-    // itemPicture, document.getElementById('item-image').src
 
     let res = await fetch('/products/create', {
         method: 'POST',
@@ -17,7 +16,8 @@ document.getElementById('post').addEventListener('submit', async (e) => {
             'Authorization': `Bearer ${Cookies.get('sessionToken')}`
         }
     })
-    console.log(await res.json())
+    res = await res.json()
+    window.location.replace('/product/' + res._id)
 })
 
 if (!Cookies.get('sessionToken')) {

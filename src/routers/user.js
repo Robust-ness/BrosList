@@ -103,6 +103,28 @@ router.get('/login', async (req, res) => {
   res.sendFile(path.join(__dirname, '../', 'pages', 'signin.html'))
 })
 
+router.get("/logout", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, '../', 'pages', 'logout.html'))
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+});
+
+router.post("/logout", auth, async (req, res) => {
+  try {
+    req.user.tokens.filter(token => {
+      return token.token !== req.token
+    })
+    await req.user.save()
+    res.redirect('/')
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+});
+
 router.post("/login", async (req, res) => {
   try {
     console.log(req.body.email)

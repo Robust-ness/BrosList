@@ -5,6 +5,7 @@ const Product = require("../models/product");
 const User = require("../models/user");
 const upload = require('../middleware/upload')
 const router = new express.Router();
+const path = require('path')
 
 router.post("/products/create", upload.single('itemPicture'), auth, async (req, res) => {
   try {
@@ -17,6 +18,30 @@ router.post("/products/create", upload.single('itemPicture'), auth, async (req, 
     res.send(product);
   } catch (e) {
     res.status(400).send(e);
+  }
+});
+
+router.get('/createlisting', async(req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'post.html'))
+})
+
+router.get("/product/:id", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, '../', 'pages', 'item.html'))
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+router.get("/product/:id/info", async (req, res) => {
+  try {
+    let product = await Product.findById(req.params.id)
+    let prod = {...product.toObject()}
+    prod.itemPicture = prod.itemPicture.toString('base64')
+    //console.log(prod)
+    res.send(prod)
+  } catch (error) {
+    res.status(400).send(error);
   }
 });
 
