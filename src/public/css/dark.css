@@ -2,16 +2,8 @@
   align-self: flex-end;
   margin: 0.9375rem;
 }
-.inner-switch:checked {
-  display: inline-block;
-  cursor: pointer;
-  border: 10px solid #555;
-  border-radius: 1.25rem;
-  width: 3.125rem;
-  text-align: center;
-  font-size: 1rem;
-  padding: 0.1875rem;
-  margin-left: 0.3125rem;
+.inner-switch:checked :root{
+ --color-primary: black;
 }
 
 .dark,

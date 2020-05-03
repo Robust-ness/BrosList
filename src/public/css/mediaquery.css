@@ -1,5 +1,18 @@
+@media only screen and (max-width: 812px){
+	html{
+		font-size: 35% !important;
+ }
+}
+
+@media only screen and (max-width: 414px){
+	html{
+		font-size: 25% !important;
+ }
+}
+
 @media only screen and (max-width: 375px){
 	html{
-		font-size: 70% !important;
+		font-size: 20% !important;
+ }
 }
-}
+

@@ -54,7 +54,7 @@ a {
 }
 
 .display {
-  height: 110vh;
+  height: 70rem;
   /* background-image: linear-gradient(
       to bottom ,
       rgba(53, 123, 166, 0.8),
@@ -79,8 +79,9 @@ a {
   text-align: left;
   width: 30%;
   font-size: 5rem;
-  margin-top: 10rem;
-  margin-left: 10rem;
+  position: absolute;
+  top: 10rem;
+  left: 10rem;
 }
 
 .header-sub {
@@ -88,8 +89,9 @@ a {
   text-align: left;
   width: 25%;
   font-size: 3rem;
-  margin-top: 5rem;
-  margin-left: 10rem;
+  position: absolute;
+  top: 30rem;
+  left: 10rem;
 }
 
 .text-area {
@@ -97,7 +99,7 @@ a {
 }
 
 .item-panel {
-  height: 60vh;
+  height: fit-content;
   width: 100%;
   padding: 5rem;
   background-color: white;
@@ -140,10 +142,12 @@ a {
   float: left;
 }
 .header-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   width: auto;
   float: right;
   height: 100%;
-  padding: 1rem;
 }
 
 .btn {
@@ -174,6 +178,8 @@ a {
   border: none;
   cursor: pointer;
   height: 3rem;
+  width: fit-content;
+  margin-left: 2rem;
 }
 
 /* The container <div> - needed to position the dropdown content */

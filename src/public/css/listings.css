@@ -11,8 +11,8 @@ html {
   background-size: cover;
   background-position: bottom;
   background-color: darkblue;
-  padding-top: 10vh;
-  padding-bottom: 20vh;
+  padding-top: 10rem;
+  padding-bottom: 20rem;
 }
 
 .top-header {
@@ -21,7 +21,7 @@ html {
   justify-content: center;
   font-size: 8rem;
   font-family: "Lato";
-  padding-bottom: 5vh;
+  padding-bottom: 5rem;
 }
 
 .item-row {
@@ -40,7 +40,7 @@ html {
   width: 20%;
   padding: 2%;
   background-color: white;
-  padding-bottom: 3vh;
+  padding-bottom: 3rem;
 }
 
 .line-separation {
@@ -61,6 +61,6 @@ html {
   font-size: 1.5rem;
   font-family: "Lato";
   color: black;
-  padding-bottom: 3vh;
-  padding-top: 3vh;
+  padding-bottom: 3rem;
+  padding-top: 3rem;
 }
