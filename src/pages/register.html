@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="/css/signin-register.css" />
+  <link rel="stylesheet" href="/css/mediaquery.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300%7CSpartan:400,500&display=swap" rel="stylesheet" />
   <link rel="icon" href="img/icon.png" />
   <link rel="stylesheet" href="/css/mediaquery.css">
@@ -12,6 +13,41 @@
 </head>
 
 <body>
+  <div class="header-global">
+    <div class="header-left">
+      <input type="checkbox" id="check">
+      <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+      </label>
+      <div class="sidebar">
+        <header>Categories</header>
+        <ul>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Technology</a></li>
+          <li><a href="#">Food</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header-right">
+      <a id="loginlink" href="" class="btn login">
+        <i class="fas fa-user-alt"></i>
+        <span id="login">Log In</span>
+      </a>
+      <a href="" class="btn cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span>Cart</span>
+      </a>
+      <div class="dropdown">
+        <button class="dropbtn" id="hellouser">Hello, {##user}!</button>
+        <div class="dropdown-content" id="usermanage">
+          <a id="myProfile">Your Account</a>
+          <a href="#">Your Orders</a>
+          <a href="#">Your Listings</a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <form id="createAccount" action="">
       <p class="top-header">Create Account</p>
