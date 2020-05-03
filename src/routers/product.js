@@ -3,7 +3,47 @@ const Review = require("../models/review");
 const auth = require("../middleware/auth");
 const Product = require("../models/product");
 const User = require("../models/user");
+const upload = require('../middleware/upload')
 const router = new express.Router();
+const path = require('path')
+
+router.post("/products/create", upload.single('itemPicture'), auth, async (req, res) => {
+  try {
+    if (req.body.price%1 != 0) {
+      throw new Error('Price Invalid')
+    }
+    //console.log(req.body, req.user, req.file.buffer)
+    const product = new Product({ ...req.body, owner: req.user._id, itemPicture: req.file.buffer });
+    console.log(await product.save());
+    res.send(product);
+  } catch (e) {
+    res.status(400).send(e);
+  }
+});
+
+router.get('/createlisting', async(req, res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'post.html'))
+})
+
+router.get("/product/:id", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, '../', 'pages', 'item.html'))
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+router.get("/product/:id/info", async (req, res) => {
+  try {
+    let product = await Product.findById(req.params.id)
+    let prod = {...product.toObject()}
+    prod.itemPicture = prod.itemPicture.toString('base64')
+    //console.log(prod)
+    res.send(prod)
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
 
 router.get("/products/:id", async (req, res) => {
   try {
@@ -24,30 +64,14 @@ router.get("/products/:id", async (req, res) => {
 
 router.get("/products/", async (req, res) => {
   try {
-    res.send(product);
+    let products = await Product.find({});
+    res.send(products);
   } catch (error) {
     res.status(400).send(error);
   }
 });
 
-router.post("/products/create", auth, async (req, res) => {
-  try {
-    const product = new Product({ ...req.body, owner: req.user._id });
-    await product.save();
-    res.send(product);
-  } catch (e) {
-    res.status(400).send(e);
-  }
-});
 
-router.delete("/products/:id", async (req, res) => {
-  try {
-    let product = await Review.findOneAndDelete({ movie: req.params.id });
-    res.send(product);
-  } catch (err) {
-    res.status(500).send(err);
-  }
-});
 
 router.patch("/products/:id", async (req, res) => {
   try {
@@ -64,12 +88,13 @@ router.patch("/products/:id", async (req, res) => {
 
 router.delete("/products/:id", async (req, res) => {
   try {
-    const user = await User.findByIdAndDelete(req.params.id);
+    //  if (Product.findById(req.params.id).owner =  )
+    const product = await Product.findByIdAndDelete(req.params.id);
 
-    if (!user) {
+    if (!product) {
       return res.status(404).send();
     }
-    res.send(user);
+    res.send(product);
   } catch (error) {
     res.status(500).send(error);
   }

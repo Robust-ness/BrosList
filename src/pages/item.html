@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/top.css">
-    <link rel="stylesheet" href="../public/css/item.css">
-    <link rel="stylesheet" href="../public/css/recommended.css">
-    <link rel="stylesheet" href="../public/css/mediaquery.css">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/item.css">
+    <link rel="stylesheet" href="/css/recommended.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c9aeaae1be.js" crossorigin="anonymous"></script>
     <title>variable for item name</title>
@@ -19,9 +19,9 @@
             <span class="btn nav-button" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
         </div>
         <div class="header-right">
-            <a href="" class="btn login">
+            <a id="loginlink" href="/login" class="btn login">
                 <i class="fas fa-user-alt"></i>
-                <span>Log In</span>
+                <span id="login">Log In</span>
             </a>
             <a href="" class="btn cart">
                 <i class="fas fa-shopping-cart"></i>
@@ -31,13 +31,13 @@
     </div>
     <div class="item-info">
         <div>
-            <img src="../public/img/shoe_example.jpg" alt="">
+            <img id="itemPicture" src="" alt="">
         </div>
         <div class="item-text">
-            <h1 class="item-name">SUPER COOL SHOE</h1>
+            <h1 id="postingTitle" class="item-name">SUPER COOL SHOE</h1>
             <h1>Price:</h1>
-            <span class="price-tag">$___</span>
-            <p class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+            <span id="price" class="price-tag">$___</span>
+            <p id="description" class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
                 rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
@@ -125,6 +125,9 @@
 
         </div>
     </div>
+    <script type="module" src="/scripts/js.cookie.mjs"></script>
+    <script nomodule defer src="/scripts/js.cookie.js"></script>
+    <script type="module" src="/scripts/listing.js"></script>
 </body>
 
 </html>

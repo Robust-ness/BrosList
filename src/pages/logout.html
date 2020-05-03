@@ -1,0 +1,17 @@
+<script type="module" src="/scripts/js.cookie.mjs"></script>
+<script nomodule defer src="/scripts/js.cookie.js"></script>
+<script type="module">
+    if (!Cookies.get('sessionToken')) {
+        window.location.replace('/')
+    }
+    fetch('/logout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${Cookies.get('sessionToken')}`
+        }
+    })
+    window.location.replace('/')
+    import Cookies from '/scripts/js.cookie.mjs'
+    Cookies.remove('sessionToken')
+</script>

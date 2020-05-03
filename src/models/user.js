@@ -76,6 +76,12 @@ userSchema.virtual('reviews', {
     foreignField: "owner",
 })
 
+userSchema.virtual('products', {
+    ref: "product",
+    localField: "_id",
+    foreignField: "owner",
+})
+
 
 
 userSchema.methods.generateToken = async function() {

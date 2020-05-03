@@ -103,6 +103,28 @@ router.get('/login', async (req, res) => {
   res.sendFile(path.join(__dirname, '../', 'pages', 'signin.html'))
 })
 
+router.get("/logout", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, '../', 'pages', 'logout.html'))
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+});
+
+router.post("/logout", auth, async (req, res) => {
+  try {
+    req.user.tokens.filter(token => {
+      return token.token !== req.token
+    })
+    await req.user.save()
+    res.redirect('/')
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+});
+
 router.post("/login", async (req, res) => {
   try {
     console.log(req.body.email)
@@ -122,7 +144,9 @@ router.post("/login", async (req, res) => {
   }
 });
 
-
+router.get('/users/my-profile', async (req,res) => {
+  res.sendFile(path.join(__dirname, '../', 'pages', 'profile.html'))
+})
 
 router.get('/users/:id/profilePic', async (req, res) => {
   try {
@@ -140,6 +164,8 @@ router.get('/users/:id/profilePic', async (req, res) => {
 router.get('/users/me', auth, async (req,res) => {
   res.send(req.user)
 })
+
+
 
 
 
