@@ -44,7 +44,8 @@ html {
 }
 .item-image{
   border: 2px solid black;
-  max-width: 30rem;
+  max-width: 40rem;
+  max-height: 40rem;
 }
 .item-description {
   margin-top: 1rem;
@@ -78,7 +79,7 @@ label {
 }
 
 .form-btn:hover{
-  background-color: rgba(3, 165, 252, .9)
+  background-color: var(--color-secondary);
 }
 
 input {
