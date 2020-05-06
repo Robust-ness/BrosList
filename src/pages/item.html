@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/top.css">
-    <link rel="stylesheet" href="/css/item.css">
-    <link rel="stylesheet" href="/css/recommended.css">
-    <link rel="stylesheet" href="/css/mediaquery.css">
+    <link rel="stylesheet" href="../public/css/top.css">
+    <link rel="stylesheet" href="../public/css/item.css">
+    <link rel="stylesheet" href="../public/css/recommended.css">
+    <link rel="stylesheet" href="../public/css/mediaquery.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/c9aeaae1be.js" crossorigin="anonymous"></script>
     <title>variable for item name</title>
@@ -16,31 +16,31 @@
 <body>
     <div class="header-global">
         <div class="header-left">
-          <input type="checkbox" id="check">
-          <label for="check">
-            <i class="fas fa-bars" id="btn"></i>
-            <i class="fas fa-times" id="cancel"></i>
-          </label>
-          <div class="sidebar">
-            <header>Categories</header>
-            <ul>
-              <li><a href="#">Clothing</a></li>
-              <li><a href="#">Technology</a></li>
-              <li><a href="#">Food</a></li>
-            </ul>
-          </div>
+            <input type="checkbox" id="check">
+            <label for="check">
+                <i class="fas fa-bars" id="btn"></i>
+                <i class="fas fa-times" id="cancel"></i>
+            </label>
+            <div class="sidebar">
+                <header>Categories</header>
+                <ul>
+                    <li><a href="#">Clothing</a></li>
+                    <li><a href="#">Technology</a></li>
+                    <li><a href="#">Food</a></li>
+                </ul>
+            </div>
         </div>
         <div class="header-right">
-          <a id="loginlink" href="" class="btn login">
-            <i class="fas fa-user-alt"></i>
-            <span id="login">Log In</span>
-          </a>
-          <a href="" class="btn cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span>Cart</span>
-          </a>
-          <div class="dropdown">
-            <button class="dropbtn" id="hellouser">Hello, {##user}!</button>
+            <a id="loginlink" href="" class="btn login">
+                <i class="fas fa-user-alt"></i>
+                <span id="login">Log In</span>
+            </a>
+            <a href="" class="btn cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Cart</span>
+            </a>
+            <div class="dropdown">
+                <button class="dropbtn" id="hellouser">Hello, {##user}!</button>
             <div class="dropdown-content" id="usermanage">
               <a id="myProfile">Your Account</a>
               <a href="#">Your Orders</a>
@@ -50,13 +50,11 @@
         </div>
       </div>
     <div class="item-info">
-        <div>
-            <img id="itemPicture" src="" alt="">
+        <div class="item-image-container">
+            <img id="itemPicture" src="../public/img/shoe_example.jpg" alt="" class="item-image">
         </div>
         <div class="item-text">
             <h1 id="postingTitle" class="item-name">SUPER COOL SHOE</h1>
-            <h1>Price:</h1>
-            <span id="price" class="price-tag">$___</span>
             <p id="description" class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
                 tempor invidunt ut labore
                 et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
@@ -69,7 +67,7 @@
                 kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
             <form action="">
                 <label for="">Quantity</label>
-                <select name="" id="">
+                <select name="" id="" class="quantity-selection">
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -79,8 +77,13 @@
                     <option value="7">7</option>
                     <option value="8">8</option>
                 </select>
-                <a href="">Buy now</a>
-                <a href="">Add to cart</a>
+                <h1>Price:</h1>
+                <span id="price" class="price-tag">$__.__</span>
+                <div class="btn-box">
+             <a href="" class="form-btn">Buy now</a>
+                <a href="" class="form-btn">Add to cart</a>  
+                </div>
+
             </form>
         </div>
     </div>

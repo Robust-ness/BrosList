@@ -54,13 +54,12 @@ a {
 }
 
 .display {
-  height: 70rem;
-  /* background-image: linear-gradient(
+  height: 50rem;
+  background-image: linear-gradient(
       to bottom ,
-      rgba(53, 123, 166, 0.8),
-      rgb(0,0,0,1)
-    ); */
-  background-image: url(../img/background-clip.jpg);
+      rgba(0,0,0, 0.5),
+      rgb(0,0,0,.3)
+  ), url(../img/background-main.jpg);
   background-position: left;
   background-size: cover;
 }
@@ -80,7 +79,7 @@ a {
   width: 30%;
   font-size: 5rem;
   position: absolute;
-  top: 10rem;
+  top: 8rem;
   left: 10rem;
 }
 
@@ -90,18 +89,26 @@ a {
   width: 25%;
   font-size: 3rem;
   position: absolute;
-  top: 30rem;
+  top: 25rem;
   left: 10rem;
 }
 
 .text-area {
   font-size: 3rem;
 }
+.panel-title {
+  color: black;
+  font-size: 3rem;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+margin-top: 3rem;
+}
 
 .item-panel {
   height: fit-content;
   width: 100%;
-  padding: 5rem;
+  padding: 2rem;
   background-color: white;
   display: flex;
   justify-content: space-around;
@@ -109,17 +116,9 @@ a {
 
 .card {
   background-color: white;
-  width: 20%;
+  width: 17rem;
   height: fit-content;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.card-label {
-  color: black;
-  font-size: 3rem;
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
 }
 
 .card-label:hover {
@@ -128,7 +127,7 @@ a {
 
 .card-image {
   width: 100%;
-  height: 20rem;
+  height: 17rem;
   object-fit: cover;
 }
 .header-global {
@@ -161,8 +160,7 @@ a {
 }
 
 .btn:hover {
-  background-color: white;
-  transform: scale(1.05);
+  text-decoration: underline;
   box-shadow: 0 8 16 rgba(155, 155, 7);
 }
 
@@ -205,6 +203,7 @@ a {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
+  font-size: 2rem;
 }
 
 /* Change color of dropdown links on hover */
@@ -220,6 +219,7 @@ a {
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
   background-color: var(--color-primary);
+  text-decoration: underline;
 }
 
 /* .darkmode-checkbox:checked~ * {
@@ -241,7 +241,7 @@ a {
 
 .sidebar {
   position: fixed;
-  left: -20rem;
+  left: -30rem;
   width: 20rem;
   height: 100%;
   background: var(--color-primary);
@@ -250,7 +250,7 @@ a {
 }
 
 .sidebar header {
-  font-size: 4rem;
+  font-size: 3rem;
   color: black;
   text-align: center;
   line-height: 5rem;
