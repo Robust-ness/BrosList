@@ -1,10 +1,3 @@
-:root {
-  --color-primary: rgb(3, 165, 252);
-  --color-secondary: rgb(194, 194, 194);
-
-  --default-font-size: 2rem;
-  --default-font-family: "Lato";
-}
 
 html {
   font-size: 62.5%;
