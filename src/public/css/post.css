@@ -72,8 +72,9 @@ a {
 .button-container {
   text-align: center;
 }
-input[type="file"] {
-  display: none;
+
+.image-select{
+  margin: 1rem;
 }
 
 label {
