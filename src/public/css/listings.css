@@ -1,7 +1,7 @@
 html {
   font-size: 62.5%;
 
-  background-color: var(--color-white);
+
 
   color: white;
   background-attachment: fixed;
@@ -10,7 +10,7 @@ html {
       to bottom ,
       rgba(0,0,0, 0.5),
       rgb(0,0,0,.3)
-  ), /* url(../img/secondbackground.jpg); */ url(../img/background-main.jpg);
+  ), url(../img/background-main.jpg);
   background-position: left;
   background-size: cover;
 }
