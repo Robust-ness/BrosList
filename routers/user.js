@@ -10,6 +10,8 @@ const fs = require('fs')
 const jwt = require('jsonwebtoken')
 const router = new express.Router();
 const path = require('path')
+const { google } = require("googleapis");
+const OAuth2 = google.auth.OAuth2;
 
 
 // router.post('/users/me/profilePic' /*auth*/, upload.single('profilePic'), async (req, res) => {
@@ -41,12 +43,24 @@ router.post("/users", upload.none(), async (req, res) => {
     const user = new User(req.body);
     await user.save();
     const token = await user.generateToken()
-
+    const oauth2Client = new OAuth2(
+      "564813776074-aokc7gtkug425lkfruper8q56rr8jqaf.apps.googleusercontent.com", // ClientID
+      "afPdZnti7seftXKjVrMbxLcF", // Client Secret
+      "https://developers.google.com/oauthplayground" // Redirect URL
+    );
+    oauth2Client.setCredentials({
+      refresh_token: "1//04f6m0-n-cLbwCgYIARAAGAQSNwF-L9IrzUiQPyqieh6-YQgaA6qFiBAqqWHgCdzCNLz8_zQINxQrhL3su9CzcbpK3Xh6VOiAYFQ"
+    });
+ const accessToken = oauth2Client.getAccessToken()
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
+        type: 'OAuth2',
         user: 'broslist.helpdesk@gmail.com',
-        pass: 'whalensucks'
+        clientId: "564813776074-aokc7gtkug425lkfruper8q56rr8jqaf.apps.googleusercontent.com",
+        clientSecret: "afPdZnti7seftXKjVrMbxLcF",
+        refreshToken: "1//04f6m0-n-cLbwCgYIARAAGAQSNwF-L9IrzUiQPyqieh6-YQgaA6qFiBAqqWHgCdzCNLz8_zQINxQrhL3su9CzcbpK3Xh6VOiAYFQ",
+        accessToken: accessToken
       }
     });
     const mailOptions = {
