@@ -19,7 +19,7 @@
 #warning-message { display: none; }
     @media only screen and (orientation:portrait){
         #warning-message { display:block; }
-        /* #full-page { display:none; } */
+        #full-page { display:none; }
     }
 
     @media only screen and (orientation:landscape){
