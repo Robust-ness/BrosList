@@ -26,6 +26,13 @@ body {
   align-items: center;
 }
 
+.full-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .container {
   color: black;
   text-align: center;
