@@ -16,24 +16,17 @@
  }
 }
 
-#orientation-container { display:block; }
-@media only screen and (orientation:portrait){
-  #orientation-container {
-    height: 100vw;
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-}
+#warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #warning-message { display:block; }
+        #full-page { display:none; }
+    }
 
-@media only screen and (orientation:landscape){
-  #orientation-container {
-     -webkit-transform: rotate(0deg);
-     -moz-transform: rotate(0deg);
-     -o-transform: rotate(0deg);
-     -ms-transform: rotate(0deg);
-     transform: rotate(0deg);
-  }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+    }
+#warning-message{
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
 }
