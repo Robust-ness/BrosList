@@ -20,7 +20,7 @@ html {
   box-sizing: border-box;
 }
 
-body {
+.full-page {
   display: flex;
   justify-content: center;
   align-items: center;
