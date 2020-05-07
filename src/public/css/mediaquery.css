@@ -21,10 +21,10 @@
         #warning-message { display:block; }
         #full-page { display:none; }
     }
-
     @media only screen and (orientation:landscape){
         #warning-message { display:none; }
     }
+  
 #warning-message{
   font-size: 3rem;
   text-align: center;
