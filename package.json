@@ -4,6 +4,7 @@
   "description": "Craigslist replacement site made my Adam Bougaev, Robert Grande, Khizar Imran, Shane Tsui, Raphael Morgenshtern.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
