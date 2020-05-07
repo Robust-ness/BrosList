@@ -1,6 +1,7 @@
 import Cookies from '/scripts/js.cookie.mjs'
 async function createPage () {
-    
+   
+
     Cookies.set("cart", "");
     if (!Cookies.get('sessionToken')) {
         // document.getElementById('hellouser').innerText = 'Hello, Guest!'
