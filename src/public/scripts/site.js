@@ -17,6 +17,10 @@ async function createPage () {if (!Cookies.get('sessionToken')) {
     document.getElementById('myProfile').href = '/users/my-profile'
 }}
 
+document.getElementById('productSearch').addEventListener('submit', async (e) => {
+    e.preventDefault()
+})
+
 createPage()
 
 

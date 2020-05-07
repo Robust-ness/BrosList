@@ -1,8 +1,9 @@
 import Cookies from '/scripts/js.cookie.mjs'
 
 document.getElementById('login').addEventListener('submit', async (e) => {
-    console.log(document.getElementById('email'))
+    
     e.preventDefault()
+    console.log(document.getElementById('email'))
     const credentials = {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value

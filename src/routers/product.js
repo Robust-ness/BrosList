@@ -33,6 +33,25 @@ router.get("/product/:id", async (req, res) => {
   }
 });
 
+router.delete("/product/:id", auth, async (req, res) => {
+  try {
+    let product = await Product.findById(req.params.id)
+    if (req.user._id == product.owner) {
+      Product.findByIdAndDelete(req.params.id)
+    }
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
+router.get("/cart", async (req, res) => {
+  try {
+    res.sendFile(path.join(__dirname, '../', 'pages', 'cart.html'))
+  } catch (error) {
+    res.status(400).send(error);
+  }
+});
+
 router.get("/product/:id/info", async (req, res) => {
   try {
     let product = await Product.findById(req.params.id)
@@ -51,7 +70,7 @@ router.get("/products/:id", async (req, res) => {
     const limit = parseInt(req.query.limit);
     const skip = parseInt(req.query.skip);
     const sort = parseInt(req.query.sort);
-    const result = await Review.find({ movie: reviewId })
+    const result = await Product.find({ movie: reviewId })
       .skip(skip)
       .limit(limit)
       .sort({ createdAt: sort });
@@ -62,7 +81,7 @@ router.get("/products/:id", async (req, res) => {
   }
 });
 
-router.get("/products/", async (req, res) => {
+router.get("/products", async (req, res) => {
   try {
     let products = await Product.find({});
     res.send(products);

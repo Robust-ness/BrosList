@@ -40,7 +40,7 @@
         <span>Cart</span>
       </a>
       <div class="dropdown">
-        <button class="dropbtn" id="hellouser">Hello, {##user}!</button>
+        <button class="dropbtn" id="hellouser">Hello, Guest!</button>
         <div class="dropdown-content" id="usermanage">
           <a href="#" id="myProfile">Your Account</a>
           <a href="#">Your Orders</a>
@@ -49,83 +49,17 @@
       </div>
     </div>
   </div>
-    <div class="container">
+    <div id="cart" class="container">
         <h1 class="header">Your Cart</h1>
-        <div class="item">
-            <div class="item-image-container">
-                <img src="../public/img/shoe_example.jpg" alt="" class="item-image">
-            </div>
-            <div class="item-text">
-                <h1 class="item-name">SUPER COOL SHOE</h1>
-                <h1>Price:</h1>
-                <span class="price-tag">$___</span>
-                <p class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet
-                    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita
-                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-image-container">
-                <img src="../public/img/shoe_example.jpg" alt="" class="item-image">
-            </div>
-            <div class="item-text">
-                <h1 class="item-name">SUPER COOL SHOE</h1>
-                <h1>Price:</h1>
-                <span class="price-tag">$___</span>
-                <p class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet
-                    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita
-                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
-        <div class="item">
-            <div class="item-image-container">
-                <img src="../public/img/shoe_example.jpg" alt="" class="item-image">
-            </div>
-            <div class="item-text">
-                <h1 class="item-name">SUPER COOL SHOE</h1>
-                <h1>Price:</h1>
-                <span class="price-tag">$___</span>
-                <p class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                    eirmod tempor invidunt ut labore
-                    et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem
-                    ipsum
-                    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore
-                    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-                    Stet
-                    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-                    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-                    clita
-                    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-            </div>
-        </div>
 
-        <a href="">Proceed to checkout</a>
+        
+
     </div>
+    <button id="checkout">Checkout</button>
+    
+    <script type="module" src="/scripts/js.cookie.mjs"></script>
+    <script nomodule defer src="/scripts/js.cookie.js"></script>
+    <script type="module" src="/scripts/cart.js"></script>
 </body>
 
 </html>
