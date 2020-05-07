@@ -72,3 +72,15 @@ html {
   padding-bottom: 3rem;
   padding-top: 3rem;
 }
+
+.listinglink {
+  font-size: 20px;
+  color: red;
+}
+
+/* Each state */
+
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none;  }
