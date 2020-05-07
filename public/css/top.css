@@ -358,6 +358,17 @@ label #cancel {
   animation: typewriter 4s steps(44) 1s 1 normal both,
     blinkTextCursor 500ms steps(44) infinite normal;
 }
+.createlisting {
+  font-size: 25px;
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.creatediv {
+  text-align: center;
+  
+}
 
 @keyframes typewriter {
   from {
