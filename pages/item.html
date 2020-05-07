@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/top.css">
+    <link rel="stylesheet" href="/css/item.css">
+    <link rel="stylesheet" href="/css/recommended.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c9aeaae1be.js" crossorigin="anonymous"></script>
+    <title>variable for item name</title>
+</head>
+
+<body id="orientation-container">
+  <div id="warning-message">
+    this website is only viewable in landscape mode
+</div>
+<div id="full-page">
+    <div class="header-global">
+        <div class="header-left">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <i class="fas fa-bars" id="btn"></i>
+            <i class="fas fa-times" id="cancel"></i>
+          </label>
+          <div class="sidebar">
+            <header>Categories</header>
+            <ul>
+              <li><a href="/createlisting">Create A listing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="header-right">
+          <a id="loginlink" href="" class="btn login">
+            <i class="fas fa-user-alt"></i>
+            <span id="login">Log In</span>
+          </a>
+          <a href="" class="btn cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span>Cart</span>
+          </a>
+          <div class="dropdown">
+            <button class="dropbtn" id="hellouser">Hello, {##user}!</button>
+            <div class="dropdown-content" id="usermanage">
+              <a href="#" id="myProfile">Your Account</a>
+              <a href="#">Your Orders</a>
+              <a href="#">Your Listings</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="item-info">
+        <div class="item-image-container">
+            <img id="itemPicture" src="../public/img/shoe_example.jpg" alt="" class="item-image">
+        </div>
+        <div class="item-text">
+            <h1 id="postingTitle" class="item-name">SUPER COOL SHOE</h1>
+            <p id="description" class="item-description">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
+                tempor invidunt ut labore
+                et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea
+                rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum
+                dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
+                amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
+                kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <form action="">
+                <label for="">Quantity</label>
+                <select name="" id="quantity" class="quantity-selection">
+                </select>
+                <h1>Price:</h1>
+                <span id="price" class="price-tag">$__.__</span>
+                <div class="btn-box">
+             <!-- <a href="" class="form-btn">Buy now</a> -->
+                <a id="addCart" href="" class="form-btn">Add to cart</a>  
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <div class="seller-review">
+        <p class="seller-review-text">
+            Seller Review
+        </p>
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+    </div>
+
+    <div class="recommended">
+
+        <p class="recommend-header">
+            You may also like...
+        </p>
+
+        <div class="recommended-item-row">
+
+            <div class="recommended-item">
+                <img class="recommended-item-image" src="../public/img/shoe_example.jpg" alt="">
+                <p class="recommended-item-name">Some Shit</p>
+                <p class="recommended-item-description">Something will go here. Size 376 because Raph cant play guitar
+                    and needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings
+                </p>
+                <p class="read-more">... (read more)</p>
+                <hr class="line-separation">
+            </div>
+
+            <div class="recommended-item">
+                <img class="recommended-item-image" src="../public/img/shoe_example.jpg" alt="">
+                <p class="recommended-item-name">Water bottles</p>
+                <p class="recommended-item-description">Something will go here. Size 376 because Raph cant play guitar
+                    and needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings Something will go here. Size 376 because Raph cant play guitar and
+                    needs to keep buying strings
+                </p>
+                <p class="read-more">... (read more)</p>
+                <hr class="line-separation">
+            </div>
+
+            <div class="recommended-item">
+                <img class="recommended-item-image" src="../public/img/shoe_example.jpg" alt="">
+                <p class="recommended-item-name">picture frAme</p>
+                <p class="recommended-item-description">lmao this is so quirky and funny like lmao this is so cool and i
+                    am so cool this is the coolest item on this goddamn market lets freaking go to the store and get
+                    some cool stuff
+                </p>
+                <p class="read-more">... (read more)</p>
+                <hr class="line-separation">
+            </div>
+
+        </div>
+    </div>
+    <script type="module" src="/scripts/js.cookie.mjs"></script>
+    <script nomodule defer src="/scripts/js.cookie.js"></script>
+    <script type="module" src="/scripts/listing.js"></script>
+</div>
+</body>
+
+</html>

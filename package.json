@@ -1,9 +1,10 @@
 {
-  "name": "successcombine",
+  "name": "broslist",
   "version": "1.0.0",
-  "description": "",
+  "description": "Craigslist replacement site made my Adam Bougaev, Robert Grande, Khizar Imran, Shane Tsui, Raphael Morgenshtern.",
   "main": "index.js",
   "scripts": {
+    "start": "node ./index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -18,5 +19,14 @@
     "nodemailer": "^6.4.6",
     "stripe": "^8.49.0",
     "validator": "^13.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Robust-ness/BrosList.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Robust-ness/BrosList/issues"
+  },
+  "homepage": "https://github.com/Robust-ness/BrosList#readme"
 }

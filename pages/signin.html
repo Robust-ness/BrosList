@@ -1,0 +1,40 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/signin-register.css">
+    <link rel="stylesheet" href="/css/mediaquery.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300|Spartan:400,500&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/icon.png">
+    <title>BrosList</title>
+</head>
+
+<body id="orientation-container">
+  <div id="warning-message">
+    this website is only viewable in landscape mode
+</div>
+<div id="full-page" class="full-page">
+     <div class="container">
+        <form id="login">
+            <p class="top-header">Sign In</p>
+            <h1>Email</h1>
+            <input class="field-email" id="email" type="text" required>
+            <h1>Password</h1>
+            <input class="field-password" id="password" type="password" required>
+            <div class="button-container">
+                <input type="submit" class="btn">
+            </div>
+            <a href="" class="reset-password">Reset Password</a>
+            <a href="/createaccount" class="create-new-account">Create New Account Instead</a>
+        </form>
+        <script type="module" src="/scripts/js.cookie.mjs"></script>
+        <script nomodule defer src="/scripts/js.cookie.js"></script>
+        <script type="module" src="/scripts/login.js"></script>
+    </div>
+</div>
+   
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+:root {
+  --color-primary: rgb(53, 123, 166);
+  --color-secondary: rgb(194, 194, 194);
+
+  --default-font-size: 200%;
+  --default-font-family: "Lato";
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--default-font-family);
+  background-image: url(../img/background-main.jpg);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+
+.container {
+  color: black;
+  text-align: center;
+  background-color: white;
+  padding: 5rem;
+  width: 50%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: .5rem;
+}
+
+h1 {
+  margin: 3rem;
+  font-size: 220%;
+}
+
+input {
+  object-position: center;
+}
+
+.btn {
+  font-size: 200%;
+  color: black;
+  transition: all 0.25s ease;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  margin: 10%;
+  width: 50%;
+  background-color: lightskyblue;
+}
+
+.button-container {
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: var(--color-primary);
+}
+
+.top-header {
+  font-size: 400%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 50%;
+}
+.field-email{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 180%;
+}
+.field-password{
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  font-size: 180%;
+}
+.reset-password{
+  margin-top: 10%;
+  font-size: 150%;
+}
+.create-new-account{
+  margin-top: 5%;
+  font-size: 150%;
+}
+
+a {
+  text-decoration: none;
+}
+

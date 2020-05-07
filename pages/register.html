@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="/css/signin-register.css" />
+  <link rel="stylesheet" href="/css/mediaquery.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300%7CSpartan:400,500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="img/icon.png" />
+  <link rel="stylesheet" href="/css/mediaquery.css">
+  <title>BrosList</title>
+</head>
+
+<body id="orientation-container">
+  <div id="warning-message">
+    this website is only viewable in landscape mode
+</div>
+<div id="full-page" class="full-page">
+  <div class="container">
+    <form id="createAccount" action="">
+      <p class="top-header">Create Account</p>
+      <h1>First Name</h1>
+      <input id="firstName" type="text" />
+      <h1>Last Name</h1>
+      <input id="lastName" type="text" />
+      <h1>Username</h1>
+      <input id="username" type="text" />
+      <h1>Email</h1>
+      <input id="email" type="text" />
+      <h1>Password</h1>
+      <input id="password" type="password" />
+      <h1>Re-enter Password</h1>
+      <input id="reEnterPassword" type="password" />
+      <div class="button-container">
+        <input type="submit" class="btn" />
+      </div>
+      <a href="">Reset Password</a>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('createAccount').addEventListener('submit', async (e) => {
+        e.preventDefault()
+        if (document.getElementById('password').value != document.getElementById('reEnterPassword').value) {
+          if (confirm("Password and Re-entered password are not equivalent")) {
+              console.log('the user has pressed okay')
+          } else {
+              console.log('the user has pressed cancel')
+          }
+          return
+        }
+        let formdata = new FormData();
+        formdata.append('firstName', document.getElementById('firstName').value)
+        formdata.append('lastName', document.getElementById('lastName').value)
+        formdata.append('username', document.getElementById('username').value)
+        formdata.append('password', document.getElementById('password').value)
+        formdata.append('email', document.getElementById('email').value)
+        let response = await fetch('/users', {
+            method: 'POST',
+            body: formdata
+        })
+        response = await response.json()
+        console.log(response)
+        if (response.status == 'Account Created Successfully') {
+          window.location.replace("/nextsteps");
+        } else if(response.message.includes('email is invalid') || response.message.includes('Similar Account Already Exists.')) {
+
+          if (confirm("Your email has already been used, or is invalid")) {
+              console.log('the user has pressed okay')
+          } else {
+              console.log('the user has pressed cancel')
+          }
+
+        }
+      }
+    )
+</script>
+</div>
+</body>
+
+</html>
