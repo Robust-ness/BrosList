@@ -59,7 +59,7 @@ router.post("/users", upload.none(), async (req, res) => {
           <div class="main">
               <div><h1 class="text">Welcome to Broslist!</h1></div>
               <div><p class="text">This email will allow you to activate your account at Broslist so you can buy more high quality goods!</p></div>
-              <a href="http://127.0.0.1:3000/verify/${jwt.sign(req.body.email, 'emailconfirm')}">Validate Now!</a>
+              <a href="https://broslist.herokuapp.com/verify/${jwt.sign(req.body.email, 'emailconfirm')}">Validate Now!</a>
           </div>
           
           `
