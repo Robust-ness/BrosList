@@ -204,8 +204,8 @@ a {
 .dropdown {
   position: relative;
   display: inline-block;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -222,7 +222,7 @@ a {
 /* Links inside the dropdown */
 .dropdown-content a {
   color: black;
-  padding: 12px 16px;
+  padding: 1rem 1rem;
   text-decoration: none;
   display: block;
   font-size: 2rem;
