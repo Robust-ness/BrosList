@@ -1,16 +1,20 @@
 html {
   font-size: 62.5%;
+
+  background-color: var(--color-white);
+
+  color: white;
+  background-attachment: fixed;
+  height: 100rem;
+  background-image: linear-gradient(
+      to bottom ,
+      rgba(0,0,0, 0.5),
+      rgb(0,0,0,.3)
+  ), /* url(../img/secondbackground.jpg); */ url(../img/background-main.jpg);
+  background-position: left;
+  background-size: cover;
 }
 .body-two {
-  background-image: linear-gradient(
-      to bottom right,
-      rgba(224, 84, 24, 0.1),
-      rgba(255, 255, 255, 0.1)
-    ),
-    url(../img/main.jpg);
-  background-size: cover;
-  background-position: bottom;
-  background-color: darkblue;
   padding-top: 10rem;
   padding-bottom: 20rem;
 }
@@ -19,13 +23,15 @@ html {
   color: white;
   display: flex;
   justify-content: center;
-  font-size: 8rem;
+  font-size: 5rem;
   font-family: "Lato";
   padding-bottom: 5rem;
 }
 
 .item-row {
+  border-radius: 2rem;
   display: flex;
+  margin-bottom: 3rem !important;
   justify-content: center;
   justify-content: space-evenly;
   background-color: white;
@@ -40,6 +46,7 @@ html {
   width: 20%;
   padding: 2%;
   background-color: white;
+  color: black;
   padding-bottom: 3rem;
 }
 
@@ -56,6 +63,7 @@ html {
   font-size: 3rem;
   font-family: "Lato";
   color: black;
+
 }
 .item-description {
   font-size: 1.5rem;

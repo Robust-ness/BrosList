@@ -1,6 +1,7 @@
 import Cookies from '/scripts/js.cookie.mjs'
 async function createPage () {if (!Cookies.get('sessionToken')) {
     document.getElementById('hellouser').innerText = 'Hello, Guest!'
+    document.getElementById('mainhello').innerText = 'Welcome to BrosList.'
     document.getElementById('usermanage').innerHTML = ''
     document.getElementById('loginlink').href = '/login'
 } else {
@@ -14,12 +15,11 @@ async function createPage () {if (!Cookies.get('sessionToken')) {
     document.getElementById('login').innerText = 'Log Out'
     document.getElementById('loginlink').href = '/logout'
     document.getElementById('hellouser').innerText = `Hello, ${response.firstName}`
+    document.getElementById('mainhello').innerText = `Hello, ${response.firstName}.`
     document.getElementById('myProfile').href = '/users/my-profile'
 }}
 
-document.getElementById('productSearch').addEventListener('submit', async (e) => {
-    e.preventDefault()
-})
+
 
 createPage()
 

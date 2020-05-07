@@ -70,7 +70,7 @@ router.get("/products/:id", async (req, res) => {
     const limit = parseInt(req.query.limit);
     const skip = parseInt(req.query.skip);
     const sort = parseInt(req.query.sort);
-    const result = await Product.find({ movie: reviewId })
+    const result = await Product.find({ postingTitle: reviewId })
       .skip(skip)
       .limit(limit)
       .sort({ createdAt: sort });

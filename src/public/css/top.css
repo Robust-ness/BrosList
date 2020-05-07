@@ -26,6 +26,7 @@ html {
 a {
   text-decoration: none;
 }
+
 .search {
   display: flex;
   justify-content: center;
@@ -33,6 +34,7 @@ a {
   z-index: 5;
   margin-top: 5rem;
 }
+
 .user-search {
   background: var(--color-secondary);
   display: flex;
@@ -41,26 +43,28 @@ a {
   justify-content: space-around;
   font-size: 3rem;
 }
+
 .user-search-banner {
   margin: 1rem;
   padding-right: 1rem;
 }
+
 .item-search {
   width: 30rem;
   height: 3rem;
 }
+
 .search-button {
   padding-left: 2rem;
   padding-right: 2rem;
 }
 
 .display {
-  height: 50rem;
-  background-image: linear-gradient(
-      to bottom ,
-      rgba(0,0,0, 0.5),
-      rgb(0,0,0,.3)
-  ), url(../img/background-main.jpg);
+  background-attachment: fixed;
+  height: 100rem;
+  background-image: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.5),
+      rgb(0, 0, 0, .3)), url(../img/background-main.jpg);
   background-position: left;
   background-size: cover;
 }
@@ -71,26 +75,31 @@ a {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  width: 60rem;
+  width: 65rem;
   height: 40rem;
-  background-color: var(--color-primary-transparent);
   top: 8rem;
   left: 10rem;
+  border-radius: 2rem;
 }
 
 .header-main {
   color: white;
   text-align: left;
   width: 100%;
-  font-size: 5rem;
+  font-size: 6rem;
   position: absolute;
+  margin-left: 9rem;
   top: 1rem;
   left: 1rem;
   font-weight: lighter;
+  animation: typewriter 2.5s steps(50) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+  animation-delay: 3s;
 }
 
 .header-sub {
   color: rgba(255, 255, 255, 0.8);
+  margin-left: 9rem;
   text-align: left;
   width: 100%;
   font-size: 3rem;
@@ -103,13 +112,14 @@ a {
 .text-area {
   font-size: 3rem;
 }
+
 .panel-title {
   color: black;
   font-size: 3rem;
   font-weight: bold;
   width: 100%;
   text-align: center;
-margin-top: 3rem;
+  margin-top: 3rem;
 }
 
 .item-panel {
@@ -137,6 +147,7 @@ margin-top: 3rem;
   height: 17rem;
   object-fit: cover;
 }
+
 .header-global {
   width: 100%;
   height: 5rem;
@@ -145,9 +156,11 @@ margin-top: 3rem;
   z-index: 999;
   border-bottom: solid 1px black;
 }
+
 .header-left {
   float: left;
 }
+
 .header-right {
   display: flex;
   justify-content: space-around;
@@ -175,6 +188,7 @@ margin-top: 3rem;
   color: white;
   font-family: "Fjalla One", sans-serif;
 }
+
 /* Style The Dropdown Button */
 .dropbtn {
   background-color: white;
@@ -200,7 +214,7 @@ margin-top: 3rem;
   position: absolute;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -214,8 +228,8 @@ margin-top: 3rem;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover{
-  background-color: rgba(0,0,0,0.1);
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Show the dropdown menu on hover */
@@ -251,7 +265,7 @@ margin-top: 3rem;
   left: -30rem;
   width: 20rem;
   height: 100%;
-  background: var(--color-primary);
+  background-color: white;
   z-index: 1000;
   transition: all 0.4s ease;
 }
@@ -314,16 +328,51 @@ label #cancel {
   transition: all 0.5s ease;
 }
 
-#check:checked ~ .sidebar {
+#check:checked~.sidebar {
   left: 0;
 }
 
-#check:checked ~ label #btn {
+#check:checked~label #btn {
   left: 12rem;
   opacity: 0;
   pointer-events: none;
 }
 
-#check:checked ~ label #cancel {
+#check:checked~label #cancel {
   left: 12rem;
+}
+
+.line-1 {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.filler {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15rem;
+  font-size: 8rem;
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 22em;
+  }
+}
+
+@keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
 }
