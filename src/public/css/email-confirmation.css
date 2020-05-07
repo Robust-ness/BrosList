@@ -28,7 +28,7 @@ body {
 .main {
   margin: 10%;
   background-color: white;
-  width: 50%;
+  width: auto;
   padding: 1rem;
   display: flex;
   flex-direction: column;
