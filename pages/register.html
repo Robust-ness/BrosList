@@ -44,7 +44,7 @@
         e.preventDefault()
         if (document.getElementById('password').value != document.getElementById('reEnterPassword').value) {
           if (confirm("Password and Re-entered password are not equivalent")) {
-              console.log('the user has pressed okay')
+              //console.log('the user has pressed okay')
           } else {
               console.log('the user has pressed cancel')
           }
@@ -67,9 +67,9 @@
         } else if(response.message.includes('email is invalid') || response.message.includes('Similar Account Already Exists.')) {
 
           if (confirm("Your email has already been used, or is invalid")) {
-              console.log('the user has pressed okay')
+              //console.log('the user has pressed okay')
           } else {
-              console.log('the user has pressed cancel')
+              //console.log('the user has pressed cancel')
           }
 
         }
