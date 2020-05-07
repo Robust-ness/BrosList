@@ -11,7 +11,7 @@ router.get('/reviews/:id', async (req,res) => {
     const skip = parseInt(req.query.skip)
     const sort = parseInt(req.query.sort)
     const result = await Review.find({movie: reviewId}).skip(skip).limit(limit).sort({createdAt: sort})
-    console.log(result)
+    //console.log(result)
     res.send(result)
   } catch (error) {
     res.status(400).send(error)

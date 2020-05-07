@@ -35,12 +35,10 @@
             formdata.append('username', document.getElementById('username').value)
             formdata.append('password', document.getElementById('password').value)
             formdata.append('email', document.getElementById('email').value)
-            console.log(formdata.get('firstName'))
             fetch('/users', {
                 method: 'POST',
                 body: formdata
             })
-            console.log(document.getElementById('firstName').value)
         })
     </script>
     <!-- <video id="video" width="640" height="640" autoplay></video>

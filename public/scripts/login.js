@@ -8,7 +8,7 @@ document.getElementById('login').addEventListener('submit', async (e) => {
         email: document.getElementById('email').value,
         password: document.getElementById('password').value
     }
-    console.log(credentials)
+    //console.log(credentials)
     let response = await fetch('/login', {
         method: 'POST',
         body: JSON.stringify(credentials),
@@ -19,9 +19,9 @@ document.getElementById('login').addEventListener('submit', async (e) => {
     response = await response.json()
     if (response.error) {
         if (confirm("Incorrect Login info")) {
-            console.log('the user has pressed okay')
+            //console.log('the user has pressed okay')
         } else {
-            console.log('the user has pressed cancel')
+            //console.log('the user has pressed cancel')
         }
     } else {
         Cookies.set('sessionToken', response.token)

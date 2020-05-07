@@ -32,9 +32,9 @@ router.get('/createaccount', async (req, res) => {
 
 router.post("/users", upload.none(), async (req, res) => {
   try {
-    console.log('creating: ' + req.body.email)
+    //console.log('creating: ' + req.body.email)
     if (await User.exists({username: req.body.username}) || await User.exists({email: req.body.email})) {
-      console.log('up my ass')
+      //console.log('up my ass')
       res.send({message : 'Similar Account Already Exists.'})
       return
     }
@@ -68,7 +68,7 @@ router.post("/users", upload.none(), async (req, res) => {
       if(err)
         throw new Error(err)
       else
-        console.log(info);
+        //console.log(info);
         res.send({status: 'Account Created Successfully'})
     });
   } catch (e) {
@@ -107,7 +107,7 @@ router.get("/logout", async (req, res) => {
   try {
     res.sendFile(path.join(__dirname, '../', 'pages', 'logout.html'))
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     res.status(400).send(error);
   }
 });
@@ -120,26 +120,26 @@ router.post("/logout", auth, async (req, res) => {
     await req.user.save()
     res.redirect('/')
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     res.status(400).send(error);
   }
 });
 
 router.post("/login", async (req, res) => {
   try {
-    console.log(req.body.email)
+    //console.log(req.body.email)
     const user = await User.findByCredentials(
       req.body.email,
       req.body.password
     );
     if (true) {
-      console.log(user)
+      //console.log(user)
     }
     const token = await user.generateToken();
 
     res.send({ user, token });
   } catch (error) {
-    console.log({error});
+    //console.log({error});
     res.send({error});
   }
 });
@@ -178,7 +178,7 @@ router.post("/users/logout", auth, async (req, res) => {
     await req.user.save()
     res.send('You have logged out')
   } catch (error) {
-    console.log(error);
+    //console.log(error);
     res.status(400).send(error);
   }
 });
@@ -187,7 +187,7 @@ router.get("/users", async (req, res) => {
   try {
     let users = await User.find({});
     res.send(users);
-    console.log(users);
+    //console.log(users);
   } catch (err) {
     res.status(500).send(err);
   }

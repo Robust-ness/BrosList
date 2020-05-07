@@ -39,7 +39,7 @@ async function createPage () {
     }
         document.getElementById('checkout').addEventListener('click', async (e) => {
         e.preventDefault()
-        console.log('fdsf9i')
+        //console.log('fdsf9i')
         function buildSupportedPaymentMethodData() {
             // Example supported payment methods:
             return [{

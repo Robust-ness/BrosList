@@ -45,7 +45,7 @@ async function createPage () {
             } else {
                 let arr = Cookies.get('cart').split(',')
                 arr.push(res._id + ':' + document.getElementById('quantity').selectedOptions[0].value)
-                console.log(arr)
+                //console.log(arr)
                 Cookies.set('cart', arr.toString())
             }
             window.location.replace(window.location.pathname)
@@ -89,7 +89,7 @@ async function createPage () {
         document.getElementById('price').innerText = `$${res.price}`
         document.getElementById('itemPicture').src = `data:image/png;base64,${res.itemPicture}`
     }
-    console.log(res)
+    //console.log(res)
     let response = await fetch('/users/me', {
         headers: {
             'Content-Type': 'application/json',

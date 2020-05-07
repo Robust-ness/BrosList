@@ -1,7 +1,7 @@
 const addMovie = async function(e) {
     e.preventDefault()
     document.getElementById('field').innerHTML = ''
-    console.log(e.target)
+    //console.log(e.target)
     let response = await fetch('/movies', {
         body: JSON.stringify({
             "title": document.getElementById('title').value,

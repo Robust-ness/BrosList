@@ -5,13 +5,13 @@ const path = require('path')
 
 router.post('/movies', async (req, res) => {
     try {
-        console.log(req.body)
+        //console.log(req.body)
         const movie = new Movie(req.body)
         res.send(req.body)
         await movie.save()
     }
     catch(e) {
-        console.log(e)
+        //console.log(e)
         res.status(500).send(e)
     }
 })
@@ -19,7 +19,7 @@ router.post('/movies', async (req, res) => {
 router.get('/movies/:id', async (req, res) => {
     try{
         let movie = await Movie.findById(req.params.id)
-        console.log(movie)
+        //console.log(movie)
         if (movie != null) {
             res.send(movie)
         } else {
@@ -46,19 +46,19 @@ router.delete('/movies/:id', async (req, res) => {
 
 router.patch('/movies/:id', async (req, res) => {
     const updates = Object.keys(req.body)
-    console.log(updates)
+    //console.log(updates)
     const allowedUpdates = ['genre']
-    console.log(req.body)
+    //console.log(req.body)
     let allowed = {}
     const isValidOperation = updates.forEach(update => {
-        console.log(update)
+        //console.log(update)
         if (allowedUpdates.includes(update)) {
-            console.log(update, req.body[update])
+            //console.log(update, req.body[update])
             allowed[update] = req.body[update]
         }
     })
     try{
-        console.log('final: ' + JSON.stringify(allowed))
+        //console.log('final: ' + JSON.stringify(allowed))
         const movie = await Movie.findByIdAndUpdate(req.params.id, allowed, {new: true})
         if (movie != null) {
             res.send(movie)
