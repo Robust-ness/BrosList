@@ -60,7 +60,6 @@ async function createPage () {
             }
         })
         response = await response.json()
-        document.getElementById('addCart').innerText = 'In Cart'
         if (response._id == res.owner) {
             document.getElementById('addCart').innerText = 'Delete Post'
             document.getElementById('addCart').addEventListener('click', async (e) => {
