@@ -6,7 +6,6 @@ async function mainlisting() {
   });
   response = await response.json();
   //console.log(response[0]);
-  var last_element = response[response.length - 1];
   document.getElementById("listing1name").innerText = `${response[response.length - 1].postingTitle}`;
   document.getElementById("listing1desc").innerText = `${response[response.length - 1].description}`;
   document.getElementById("listing1link").href = `/product/${response[response.length - 1]._id}`;
